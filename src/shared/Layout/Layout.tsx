@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import {useBem} from '@steroidsjs/core/hooks';
-import useLayout, {STATUS_OK, STATUS_LOADING} from '@steroidsjs/core/hooks/useLayout';
+import {useBem, useSelector} from '@steroidsjs/core/hooks';
+import useLayout, {STATUS_LOADING, STATUS_OK} from '@steroidsjs/core/hooks/useLayout';
 
 import {Notifications} from '@steroidsjs/core/ui/layout';
 import Portal from '@steroidsjs/core/ui/layout/Portal';
@@ -11,9 +11,14 @@ import {ROUTE_ROOT} from '../../routes';
 import './Layout.scss';
 import Header from './views/Header';
 import Footer from './views/Footer';
+import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
+import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
 
+// TODO - Отрефакторить код (перенести ХК)
 export default function Layout(props: React.PropsWithChildren<any>) {
     const bem = useBem('Layout');
+    const routeId = useSelector(getRouteId);
+    const breadcrumbs = useSelector(state => getRouteBreadcrumbs(state, routeId));
 
     //const components = useComponents();
     const {status} = useLayout(/*() => components.http.post('/api/v1/init')*/);
@@ -28,6 +33,7 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
             <div className={bem.element('content')}>
                 <Notifications />
+                {routeId !== ROUTE_ROOT && <Breadcrumbs items={breadcrumbs} />}
                 {props.children}
                 <ModalPortal />
                 {
