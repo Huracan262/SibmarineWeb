@@ -12,6 +12,8 @@ import Clients from './views/Clients';
 import Warranty from './views/Warranty';
 
 import './IndexPage.scss';
+import {Link} from '@steroidsjs/core/ui/nav';
+import {ROUTE_ABOUT} from '../index';
 
 export default function IndexPage() {
     const bem = useBem('IndexPage');
@@ -19,6 +21,7 @@ export default function IndexPage() {
     return (
         <main className={bem.block()}>
             Домашняя страница
+            <Link toRoute={ROUTE_ABOUT} label='О компании' />
             <Banner />
             <Service />
             <Catalog />

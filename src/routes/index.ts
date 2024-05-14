@@ -15,6 +15,7 @@ export default {
     roles,
     items: {
         [ROUTE_ABOUT]: {
+            id: ROUTE_ABOUT,
             label: 'О компании',
             exact: true,
             path: '/about',
