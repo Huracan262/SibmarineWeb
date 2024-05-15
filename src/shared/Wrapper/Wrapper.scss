@@ -1,0 +1,6 @@
+@use 'style/variables' as v;
+
+.Wrapper {
+  width: v.$width-desktop;
+  margin: 0 auto;
+}
