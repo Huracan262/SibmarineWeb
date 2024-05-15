@@ -1,28 +1,28 @@
 const PARTNERS_LIST = [
     {
         title: 'Каскад',
-        src: 'images/partners/partner-3.png',
+        src: 'images/partners/kaskad.png',
     }, {
         title: 'МСА',
-        src: 'images/partners/partner-5.png',
+        src: 'images/partners/msa.png',
     }, {
         title: 'Морская техника',
-        src: 'images/partners/partner-4.png',
+        src: 'images/partners/mt-group.png',
     }, {
         title: 'Аргут',
-        src: 'images/partners/partner-2.png',
+        src: 'images/partners/argut.png',
     }, {
         title: 'Фуруно',
-        src: 'images/partners/partner-8.png',
+        src: 'images/partners/furuno.png',
     }, {
         title: 'Полар',
-        src: 'images/partners/partner-1.png',
+        src: 'images/partners/polar.png',
     }, {
         title: 'НСР',
-        src: 'images/partners/partner-6.png',
+        src: 'images/partners/nsr.png',
     }, {
         title: 'Транзас навигатор',
-        src: 'images/partners/partner-7.png',
+        src: 'images/partners/transas.png',
     },
 ];
 
