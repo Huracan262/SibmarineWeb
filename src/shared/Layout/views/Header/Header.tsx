@@ -2,7 +2,11 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
+
+
 import './Header.scss';
+import Logo from 'ui/Logo';
+import Wrapper from '../../../Wrapper';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IHeader {
@@ -14,7 +18,14 @@ const Header: React.FC<IHeader> = ({...props}) => {
 
     return (
         <header className={bem.block()}>
-            Я хедер и мне не стыдно
+            <Wrapper>
+                Я хедер и мне не стыдно
+                <Logo
+                    className={bem.element('logo')}
+                    size='200'
+                    color='white'
+                />
+            </Wrapper>
         </header>
     );
 };
