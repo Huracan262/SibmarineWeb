@@ -1,2 +1,11 @@
+// steroids bootstrap
 @import '~@steroidsjs/bootstrap/scss/mixins';
 @import '~@steroidsjs/bootstrap/scss/variables';
+
+// screen size
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1400px;
+
+// color
+$color-main: #162639;
