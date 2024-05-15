@@ -4,9 +4,10 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import Logo from 'ui/Logo';
 import Wrapper from 'shared/Wrapper';
+import Contacts from 'shared/Contacts';
+import Button from 'ui/Button';
 
 import './Header.scss';
-import Contacts from '../../../Contacts';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IHeader {
@@ -28,6 +29,9 @@ const Header: React.FC<IHeader> = ({...props}) => {
                 <div>
                     <div>
                         <Contacts />
+                        <Button onClick={''}>
+                            Оставить заявку!
+                        </Button>
                     </div>
 
 
