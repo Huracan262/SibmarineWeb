@@ -9,11 +9,9 @@ import './AboutPage.scss';
 const AboutPage: React.FC = () => {
     const bem = useBem('AboutPage');
 
-    const onClick = useOpenModal();
-
     return (
         <div className={bem.block()}>
-            <button onClick={onClick}>Нажми на меня!</button>
+            <button onClick={useOpenModal()}>Нажми на меня!</button>
         </div>
     );
 };
