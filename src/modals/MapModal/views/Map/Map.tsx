@@ -10,7 +10,7 @@ const Map: React.FC = () => {
     const bem = useBem('Map');
 
     return (
-        <div className={bem.block()}>
+        <aside className={bem.block()}>
             <a href={MAP_URL4}>СибМарин Трейд</a>
             <a href={MAP_URL3}>Судовое оборудование в Красноярске</a>
             <a href={MAP_URL2}>Электротехническая продукция в Красноярске</a>
@@ -21,7 +21,7 @@ const Map: React.FC = () => {
                 height="500"
                 allowFullScreen
             />
-        </div>
+        </aside>
     );
 };
 
