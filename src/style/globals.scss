@@ -1,0 +1,59 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  // TODO - Добавить глобальные стили
+  //font-family: "Montserrat", "Roboto", "Calibri", "Arial", sans-serif;
+  //font-size: 16px;
+  //font-weight: 300;
+  //color: $color-white;
+
+  //background-color: $color-main;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Стилизация боковой полосы прокрутки */
+/* Ширина боковой полосы */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Цвет боковой полосы */
+::-webkit-scrollbar-track {
+  background: #333; /* Темный цвет фона */
+}
+
+/* Цвет ползунка */
+::-webkit-scrollbar-thumb {
+  background: #666; /* Цвет ползунка */
+}
+
+/* Изменение цвета при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #999; /* Цвет при наведении */
+}
