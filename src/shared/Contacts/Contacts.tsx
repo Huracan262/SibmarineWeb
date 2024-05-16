@@ -20,7 +20,7 @@ const Contacts: React.FC<IContacts> = ({...props}) => {
                 className={bem.element('item')}
                 onClick={useOpenModal()}
             >
-                    г. Красноярск, ул. 60 лет Октября д. 90, оф. 2-16
+                г. Красноярск, ул. 60 лет Октября д. 90, оф. 2-16
             </button>
             <a
                 className={bem.element('item')}

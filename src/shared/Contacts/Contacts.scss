@@ -1,9 +1,13 @@
 @use 'style/variables' as v;
 
 .Contacts {
+  font-style: normal;
+
   &__item {
     font-size: inherit;
     font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
 
     border: none;
     background-color: transparent;
