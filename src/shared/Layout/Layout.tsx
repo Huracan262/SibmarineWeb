@@ -6,13 +6,14 @@ import useLayout, {STATUS_LOADING, STATUS_OK} from '@steroidsjs/core/hooks/useLa
 import {Notifications} from '@steroidsjs/core/ui/layout';
 import Portal from '@steroidsjs/core/ui/layout/Portal';
 import ModalPortal from '@steroidsjs/core/ui/modal/ModalPortal';
-import {ROUTE_ROOT} from '../../routes';
+import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
+import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
+
+import RoutesId from 'enums/RoutesId';
 
 import './Layout.scss';
 import Header from './views/Header';
 import Footer from './views/Footer';
-import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
-import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
 
 // TODO - Отрефакторить код (перенести ХК)
 export default function Layout(props: React.PropsWithChildren<any>) {
@@ -33,7 +34,7 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
             <div className={bem.element('content')}>
                 <Notifications />
-                {routeId !== ROUTE_ROOT && <Breadcrumbs items={breadcrumbs} />}
+                {routeId !== RoutesId.HOME && <Breadcrumbs items={breadcrumbs} />}
                 {props.children}
                 <ModalPortal />
                 {

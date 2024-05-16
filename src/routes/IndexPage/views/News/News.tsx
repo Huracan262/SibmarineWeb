@@ -3,6 +3,7 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './News.scss';
+import Wrapper from '../../../../shared/Wrapper';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface INews {
@@ -14,7 +15,9 @@ const News: React.FC<INews> = ({...props}) => {
 
     return (
         <div className={bem.block()}>
-            {'News'}
+            <Wrapper>
+                {'News'}
+            </Wrapper>
         </div>
     );
 };

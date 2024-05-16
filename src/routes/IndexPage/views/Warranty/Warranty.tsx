@@ -3,6 +3,7 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Warranty.scss';
+import Wrapper from '../../../../shared/Wrapper';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IWarranty {
@@ -14,7 +15,9 @@ const Warranty: React.FC<IWarranty> = ({...props}) => {
 
     return (
         <div className={bem.block()}>
-            {'Warranty'}
+            <Wrapper>
+                {'Warranty'}
+            </Wrapper>
         </div>
     );
 };

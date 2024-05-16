@@ -21,17 +21,17 @@ const ApplicationForm: React.FC = ({...props}) => {
             <form>
                 <div>
                     <label htmlFor="name">Ваше имя:</label>
-                    <input type="text" name="name" id="name" maxLength="50" required placeholder="Ваше имя" />
+                    <input type="text" name="name" id="name" maxLength={50} required placeholder="Ваше имя" />
                 </div>
 
                 <div>
                     <label htmlFor="contacts">Контакты:</label>
-                    <input type="text" name="contacts" id="contacts" maxLength="50" required placeholder="email / телефон"/>
+                    <input type="text" name="contacts" id="contacts" maxLength={50} required placeholder="email / телефон"/>
                 </div>
 
                 <div>
                     <label htmlFor="text">Заявка:</label>
-                    <textarea name="text" id="text" rows={10} maxLength="200" required spellCheck="true" placeholder="Введите ваш запрос" />
+                    <textarea name="text" id="text" rows={10} maxLength={200} required spellCheck="true" placeholder="Введите ваш запрос" />
                 </div>
 
                 <Button onClick=''>Отправить</Button>

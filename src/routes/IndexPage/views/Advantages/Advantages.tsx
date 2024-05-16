@@ -3,6 +3,7 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Advantages.scss';
+import Wrapper from '../../../../shared/Wrapper';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IAdvantages {
@@ -14,7 +15,9 @@ const Advantages: React.FC<IAdvantages> = ({...props}) => {
 
     return (
         <div className={bem.block()}>
-            {'Advantages'}
+            <Wrapper>
+                {'Advantages'}
+            </Wrapper>
         </div>
     );
 };
