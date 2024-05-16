@@ -5,14 +5,14 @@ import {Link} from '@steroidsjs/core/ui/nav';
 
 import {PiArrowRightThin} from 'react-icons/pi';
 
-import RoutesId from 'enums/RoutesId';
+import RouteId from 'enums/RouteId';
 import getWhiteModifier from 'utils/getWhiteModifier';
 
 import './Title.scss';
 
 interface ITitle {
     children: string,
-    link?: RoutesId,
+    link?: RouteId,
     white?: boolean,
 }
 

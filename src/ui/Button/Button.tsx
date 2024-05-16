@@ -7,7 +7,7 @@ import './Button.scss';
 // TODO - Заменить Any
 interface IButton {
     children: string,
-    onClick: any,
+    onClick: () => void,
 }
 
 const Button: React.FC<IButton> = ({children, onClick}: IButton) => {

@@ -4,7 +4,7 @@ import Modal, {IModalProps} from '@steroidsjs/core/ui/modal/Modal/Modal';
 
 import ApplicationForm from './views/ApplicationForm';
 
-export const APPLICATION_FORM_ID = 2
+export const APPLICATION_FORM_MODAL_ID = 2;
 
 const ApplicationFormModal = (props: IModalProps) => {
     return (

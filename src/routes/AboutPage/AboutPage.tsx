@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className={bem.block()}>
-            <button onClick={useOpenModal()}>Нажми на меня!</button>
+            <span className={bem.block()}>AboutPage</span>
         </div>
     );
 };

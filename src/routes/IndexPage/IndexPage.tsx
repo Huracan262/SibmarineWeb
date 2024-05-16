@@ -2,7 +2,7 @@ import * as React from 'react';
 import {useBem} from '@steroidsjs/core/hooks';
 import {Link} from '@steroidsjs/core/ui/nav';
 
-import RoutesId from 'enums/RoutesId';
+import RouteId from 'enums/RouteId';
 
 import Banner from './views/Banner';
 import Service from './views/Service';
@@ -23,7 +23,7 @@ export default function IndexPage() {
         <main className={bem.block()}>
             Домашняя страница
             <Link
-                toRoute={RoutesId.ABOUT}
+                toRoute={RouteId.ABOUT}
                 label='О компании'
             />
             <Banner />

@@ -1,6 +1,7 @@
 @use 'style/variables' as v;
 
 .Contacts {
+  outline: 1px solid blue;
   font-style: normal;
 
   &__item {

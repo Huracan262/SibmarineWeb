@@ -1,0 +1,16 @@
+@use 'style/variables' as v;
+
+.MainNavigation {
+  outline: 1px solid blue;
+
+  display: flex;
+  justify-content: flex-end;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+
+  }
+}

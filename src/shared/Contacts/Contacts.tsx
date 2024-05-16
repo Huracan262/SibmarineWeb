@@ -3,6 +3,7 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import useOpenModal from 'hooks/useOpenModal';
+import {MAP_MODAL_ID} from 'modals/MapModal/MapModal';
 
 import './Contacts.scss';
 
@@ -14,11 +15,13 @@ interface IContacts {
 const Contacts: React.FC<IContacts> = ({...props}) => {
     const bem = useBem('Contacts');
 
+    const openModal = useOpenModal(MAP_MODAL_ID);
+
     return (
         <address className={bem.block()}>
             <button
                 className={bem.element('item')}
-                onClick={useOpenModal()}
+                onClick={openModal}
             >
                 г. Красноярск, ул. 60 лет Октября д. 90, оф. 2-16
             </button>

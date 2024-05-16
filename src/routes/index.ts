@@ -1,6 +1,6 @@
 import {IRouteItem} from '@steroidsjs/core/ui/nav/Router/Router';
 
-import RoutesId from 'enums/RoutesId';
+import RouteId from 'enums/RouteId';
 
 import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
@@ -8,14 +8,14 @@ import AboutPage from './AboutPage';
 const roles = [null];
 
 export default {
-    id: RoutesId.HOME,
+    id: RouteId.HOME,
     exact: true,
     path: '/',
     component: IndexPage,
     roles,
     items: {
-        [RoutesId.ABOUT]: {
-            id: RoutesId.ABOUT,
+        [RouteId.ABOUT]: {
+            id: RouteId.ABOUT,
             label: 'О компании',
             exact: true,
             path: '/about',

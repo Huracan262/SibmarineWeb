@@ -1,5 +1,42 @@
 @use 'style/variables' as v;
 
 .Header {
+  &__wrapper {
+    display: flex;
+  }
 
+  &__logo {
+
+
+    outline: 1px solid red;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    outline: 1px solid red;
+  }
+
+  &__row-top {
+    outline: 1px solid green;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__row-bottom {
+    outline: 1px solid green;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__search {
+    margin-left: auto;
+    width: 200px;
+
+    //transform: translateX(100px);
+  }
 }

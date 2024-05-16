@@ -4,18 +4,18 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Wrapper.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IWrapper {
     children: any,
+    className?: string,
 }
 
 // TODO - Исправить тип any
-const Wrapper: React.FC<IWrapper> = (props: IWrapper) => {
+const Wrapper = ({children, className}: IWrapper) => {
     const bem = useBem('Wrapper');
 
     return (
-        <div className={bem.block()}>
-            {props.children}
+        <div className={`${bem.block()} ${className}`}>
+            {children}
         </div>
     );
 };

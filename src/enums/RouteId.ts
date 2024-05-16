@@ -1,6 +1,6 @@
-enum RoutesId {
+enum RouteId {
     HOME = 'home',
     ABOUT = 'about',
 }
 
-export default RoutesId;
+export default RouteId;

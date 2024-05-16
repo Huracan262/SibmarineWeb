@@ -9,7 +9,7 @@ import ModalPortal from '@steroidsjs/core/ui/modal/ModalPortal';
 import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
 
-import RoutesId from 'enums/RoutesId';
+import RouteId from 'enums/RouteId';
 
 import './Layout.scss';
 import Header from './views/Header';
@@ -34,7 +34,7 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
             <div className={bem.element('content')}>
                 <Notifications />
-                {routeId !== RoutesId.HOME && <Breadcrumbs items={breadcrumbs} />}
+                {/*{routeId !== RouteId.HOME && <Breadcrumbs items={breadcrumbs} />}*/}
                 {props.children}
                 <ModalPortal />
                 {
