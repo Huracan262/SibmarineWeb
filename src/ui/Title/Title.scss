@@ -7,19 +7,20 @@
 
   &__title {
     width: v.$width-desktop;
-    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
 
+
     font-size: 30px;
-    font-weight: 200;
+    font-weight: 400;
     text-transform: uppercase;
+    color: v.$color-light-blue;
 
     border-radius: 0;
-    border-bottom: 1px solid fade-out(blue, 0.7); // TODO - Пофиксить цвет (указанный временный)
+    border-bottom: 1px solid v.$color-border-lines;
 
     transition: border-color 200ms ease-out;
-
-    cursor: pointer; // TODO - Пофиксить временное решение
   }
 
   &__icon {
@@ -32,12 +33,8 @@
     transition: opacity 200ms ease-out, transform 200ms ease-out, color 400ms ease-out;
   }
 
-  &:hover {
-    border-color: red // TODO - Пофиксить цвет (указанный временный)
-  }
-
   &:hover &__icon {
-    color: red; // TODO - Пофиксить цвет (указанный временный)
+    color: v.$color-tiffany-blue;
     opacity: 1;
     transform: translateX(0) scale(1);
   }

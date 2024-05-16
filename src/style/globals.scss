@@ -1,3 +1,6 @@
+@use 'variables' as v;
+@import 'fonts.scss';
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -7,12 +10,12 @@
 
 body {
   // TODO - Добавить глобальные стили
-  //font-family: "Montserrat", "Roboto", "Calibri", "Arial", sans-serif;
-  //font-size: 16px;
-  //font-weight: 300;
-  //color: $color-white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: v.$color-text-light;
 
-  //background-color: $color-main;
+  background-color: v.$color-dark-navy;
 }
 
 ul {
@@ -37,23 +40,30 @@ img {
   overflow: hidden;
 }
 
-/* Стилизация боковой полосы прокрутки */
-/* Ширина боковой полосы */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 10px; // Ширина полосы прокрутки
+  height: 10px; // Высота для горизонтальной полосы, если потребуется
+  opacity: 0; // Полностью прозрачный по умолчанию
+  transition: opacity 0.3s; // Плавное изменение прозрачности
 }
 
-/* Цвет боковой полосы */
+/* Стили трека (дорожки) */
 ::-webkit-scrollbar-track {
-  background: #333; /* Темный цвет фона */
+  background: v.$color-dark-navy; // Используем темно-синий фон
 }
 
-/* Цвет ползунка */
+/* Стили самого ползунка */
 ::-webkit-scrollbar-thumb {
-  background: #666; /* Цвет ползунка */
+  background: v.$color-border-lines; // Голубой цвет ползунка
+  border-radius: 5px; // Скругленные края для ползунка
 }
 
-/* Изменение цвета при наведении */
+/* Изменение стиля ползунка при наведении */
 ::-webkit-scrollbar-thumb:hover {
-  background: #999; /* Цвет при наведении */
+  background: v.$color-light-blue; // Светло-синий цвет при наведении
+}
+
+/* Показываем полосу прокрутки при наведении */
+body:hover::-webkit-scrollbar {
+  opacity: 1; // Полностью видимый только при наведении
 }

@@ -1,0 +1,10 @@
+// Для быстрого добавления шрифтов в fonts.scss
+@mixin font($f-name, $f-style, $f-weight, $f-fileName) {
+  @font-face {
+    font-family: "#{$f-name}";
+    src: url("../../public/fonts/#{$f-name}/#{$f-fileName}.woff2") format("woff2"),
+    url("../../public/fonts/#{$f-name}/#{$f-fileName}.woff") format("woff");
+    font-style: $f-style;
+    font-weight: $f-weight;
+  }
+}
