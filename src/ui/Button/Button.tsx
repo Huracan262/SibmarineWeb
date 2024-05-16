@@ -6,7 +6,7 @@ import './Button.scss';
 
 // TODO - Заменить Any
 interface IButton {
-    children: any,
+    children: string,
     onClick: any,
 }
 
@@ -14,7 +14,10 @@ const Button: React.FC<IButton> = ({children, onClick}: IButton) => {
     const bem = useBem('Button');
 
     return (
-        <button className={bem.block()} onClick={() => onClick}>
+        <button
+            className={bem.block()}
+            onClick={() => onClick}
+        >
             {children}
         </button>
     );

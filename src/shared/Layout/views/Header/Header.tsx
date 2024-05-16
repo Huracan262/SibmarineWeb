@@ -30,7 +30,7 @@ const Header: React.FC<IHeader> = ({...props}) => {
                     <div>
                         <Contacts />
                         <Button onClick={''}>
-                            Оставить заявку!
+                            Оставить заявку
                         </Button>
                     </div>
 
