@@ -9,13 +9,18 @@
 }
 
 body {
-  // TODO - Добавить глобальные стили
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: v.$color-text-light;
 
   background-color: v.$color-dark-navy;
+
+  section[class$="--white"] {
+    color: v.$color-text-dark;
+
+    background-color: v.$color-light-background;
+  }
 }
 
 ul {

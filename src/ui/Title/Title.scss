@@ -3,6 +3,7 @@
 .Title {
   width: v.$width-desktop;
   display: inline-block;
+
   border-radius: 0;
 
   &__title {
@@ -13,14 +14,19 @@
 
 
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 200;
     text-transform: uppercase;
-    color: v.$color-light-blue;
+    color: v.$color-text-light;
 
     border-radius: 0;
     border-bottom: 1px solid v.$color-border-lines;
 
     transition: border-color 200ms ease-out;
+  }
+
+  &__title--white {
+    color: v.$color-text-dark;
+    border-bottom: 1px solid fade-out(v.$color-dark-navy, 0.6);
   }
 
   &__icon {
@@ -31,6 +37,10 @@
     opacity: 0;
 
     transition: opacity 200ms ease-out, transform 200ms ease-out, color 400ms ease-out;
+  }
+
+  &__icon--white {
+    color: v.$color-tiffany-blue;
   }
 
   &:hover &__icon {
