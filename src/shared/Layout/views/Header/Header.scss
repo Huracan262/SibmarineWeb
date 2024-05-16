@@ -3,37 +3,36 @@
 .Header {
   &__wrapper {
     display: flex;
+    position: relative;
   }
 
   &__logo {
-
-
-    outline: 1px solid red;
   }
 
   &__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     flex-grow: 1;
 
-    outline: 1px solid red;
   }
 
   &__row-top {
-    outline: 1px solid green;
-
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__button {
+    margin-left: 20px;
   }
 
   &__row-bottom {
-    outline: 1px solid green;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
   &__search {
+    //display: block;
     margin-left: auto;
     width: 200px;
 

@@ -18,55 +18,55 @@ const DATA: IDATA[] = [
         icon: <FaList />,
         items: [
             {
-                name: 'Механизмы',
+                title: 'Механизмы',
                 url: '/catalog/mechanisms',
                 items: [
                     {
-                        name: 'Стропа',
+                        title: 'Стропа',
                         url: '/catalog/mechanisms/stropa',
                     },
                     {
-                        name: 'Винт',
+                        title: 'Винт',
                         url: '/catalog/mechanisms/screw',
                     },
                     {
-                        name: 'Лодка',
+                        title: 'Лодка',
                         url: '/catalog/mechanisms/boat',
                     },
                 ],
             },
             {
-                name: 'Электрооборудование',
+                title: 'Электрооборудование',
                 url: '/catalog/elektro',
                 items: [
                     {
-                        name: 'Автоматический выключатель',
+                        title: 'Автоматический выключатель',
                         url: '/catalog/elektro/avtomat',
                     },
                     {
-                        name: 'Контактор',
+                        title: 'Контактор',
                         url: '/catalog/elektro/contactor',
                     },
                     {
-                        name: 'Провод',
+                        title: 'Провод',
                         url: '/catalog/elektro/wire',
                     },
                 ],
             },
             {
-                name: 'Радионавигационное оборудование',
+                title: 'Радионавигационное оборудование',
                 url: '/catalog/radio',
                 items: [
                     {
-                        name: 'Локатор',
+                        title: 'Локатор',
                         url: '/catalog/radio/locator',
                     },
                     {
-                        name: 'Радиостанция',
+                        title: 'Радиостанция',
                         url: '/catalog/radio/radio-station',
                     },
                     {
-                        name: 'Рация',
+                        title: 'Рация',
                         url: '/catalog/radio/walkie-talkie',
                     },
                 ],
@@ -79,55 +79,55 @@ const DATA: IDATA[] = [
         icon: <MdBuild />,
         items: [
             {
-                name: 'По радио-навигационному оборудованию',
+                title: 'По радио-навигационному оборудованию',
                 url: '/services/radio-nav',
                 items: [
                     {
-                        name: 'Установка GPS систем',
+                        title: 'Установка GPS систем',
                         url: '/services/radio-nav/gps-installation',
                     },
                     {
-                        name: 'Ремонт радиолокационной аппаратуры',
+                        title: 'Ремонт радиолокационной аппаратуры',
                         url: '/services/radio-nav/radar-repair',
                     },
                     {
-                        name: 'Обслуживание авионики',
+                        title: 'Обслуживание авионики',
                         url: '/services/radio-nav/avionics-maintenance',
                     },
                 ],
             },
             {
-                name: 'По электрическому оборудованию',
+                title: 'По электрическому оборудованию',
                 url: '/services/electrical',
                 items: [
                     {
-                        name: 'Монтаж электропроводки',
+                        title: 'Монтаж электропроводки',
                         url: '/services/electrical/wiring-installation',
                     },
                     {
-                        name: 'Техническое обслуживание электродвигателей',
+                        title: 'Техническое обслуживание электродвигателей',
                         url: '/services/electrical/motor-maintenance',
                     },
                     {
-                        name: 'Диагностика и ремонт электропанелей',
+                        title: 'Диагностика и ремонт электропанелей',
                         url: '/services/electrical/panel-diagnostics',
                     },
                 ],
             },
             {
-                name: 'По корпусным работам',
+                title: 'По корпусным работам',
                 url: '/services/hull-work',
                 items: [
                     {
-                        name: 'Сварочные работы',
+                        title: 'Сварочные работы',
                         url: '/services/hull-work/welding',
                     },
                     {
-                        name: 'Покраска и обработка корпуса',
+                        title: 'Покраска и обработка корпуса',
                         url: '/services/hull-work/painting',
                     },
                     {
-                        name: 'Ремонт и восстановление корпуса',
+                        title: 'Ремонт и восстановление корпуса',
                         url: '/services/hull-work/hull-repair',
                     },
                 ],
@@ -140,23 +140,23 @@ const DATA: IDATA[] = [
         icon: <IoBusiness />,
         items: [
             {
-                name: 'О нас',
+                title: 'О нас',
                 url: '/about/us',
             },
             {
-                name: 'Сертификаты и лицензии',
+                title: 'Сертификаты и лицензии',
                 url: '/about/certificates',
             },
             {
-                name: 'Наши работы',
+                title: 'Наши работы',
                 url: '/about/our-work',
             },
             {
-                name: 'Новости',
+                title: 'Новости',
                 url: '/about/news',
             },
             {
-                name: 'Контакты',
+                title: 'Контакты',
                 url: '/about/contacts',
             },
         ],

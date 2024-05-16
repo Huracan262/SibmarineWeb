@@ -1,5 +1,14 @@
 @use 'style/variables' as v;
 
 .NavMenu {
+  width: v.$width-desktop / 1.3;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: -300px;
 
+  color: black;
+
+  background-color: v.$color-light-blue;
 }

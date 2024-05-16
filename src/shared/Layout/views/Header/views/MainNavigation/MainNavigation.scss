@@ -1,16 +1,34 @@
 @use 'style/variables' as v;
 
 .MainNavigation {
-  outline: 1px solid blue;
-
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
 
   &__list {
     display: flex;
+    gap: 40px
   }
 
   &__list-item {
+  }
 
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+
+    color: v.$color-text-light;
+  }
+
+  &__text {
+    color: v.$color-text-light;
   }
 }

@@ -1,16 +1,25 @@
 @use 'style/variables' as v;
 
 .Contacts {
-  outline: 1px solid blue;
+  display: flex;
+  gap: 20px;
+
   font-style: normal;
 
   &__item {
-    font-size: inherit;
+    font-size: 14px;
     font-weight: inherit;
     font-style: inherit;
-    color: inherit;
+    color: fade-out(v.$color-light-blue, 0.5);
 
     border: none;
     background-color: transparent;
+
+    transition: color 200ms ease-out;
+
+    &:hover {
+      color: v.$color-light-blue;
+      text-decoration: underline;
+    }
   }
 }

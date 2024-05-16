@@ -7,16 +7,19 @@ import './Button.scss';
 // TODO - Заменить Any
 interface IButton {
     children: string,
-    onClick: () => void,
+    onClick?: () => void,
+    className?: string,
+    disabled?: boolean,
 }
 
-const Button: React.FC<IButton> = ({children, onClick}: IButton) => {
+const Button: React.FC<IButton> = ({children, onClick, className, disabled = false}: IButton) => {
     const bem = useBem('Button');
 
     return (
         <button
-            className={bem.block()}
+            className={`${bem.block()} ${className}`}
             onClick={() => onClick}
+            disabled={disabled}
         >
             {children}
         </button>
