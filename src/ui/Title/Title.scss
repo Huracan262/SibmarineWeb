@@ -1,5 +1,44 @@
 @use 'style/variables' as v;
 
 .Title {
+  width: v.$width-desktop;
+  display: inline-block;
+  border-radius: 0;
 
+  &__title {
+    width: v.$width-desktop;
+    margin-bottom: 25px;
+    position: relative;
+
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+
+    border-radius: 0;
+    border-bottom: 1px solid fade-out(blue, 0.7); // TODO - Пофиксить цвет (указанный временный)
+
+    transition: border-color 200ms ease-out;
+
+    cursor: pointer; // TODO - Пофиксить временное решение
+  }
+
+  &__icon {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    transform: translateX(-40px) scale(0.5);
+    opacity: 0;
+
+    transition: opacity 200ms ease-out, transform 200ms ease-out, color 400ms ease-out;
+  }
+
+  &:hover {
+    border-color: red // TODO - Пофиксить цвет (указанный временный)
+  }
+
+  &:hover &__icon {
+    color: red; // TODO - Пофиксить цвет (указанный временный)
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }

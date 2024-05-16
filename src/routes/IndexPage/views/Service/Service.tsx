@@ -4,6 +4,7 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Service.scss';
 import Wrapper from '../../../../shared/Wrapper';
+import Title from '../../../../ui/Title';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IService {
@@ -16,7 +17,7 @@ const Service: React.FC<IService> = ({...props}) => {
     return (
         <div className={bem.block()}>
             <Wrapper>
-                {'Service'}
+                <Title>Сервис</Title>
             </Wrapper>
         </div>
     );

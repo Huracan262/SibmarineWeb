@@ -8,6 +8,7 @@ import PARTNERS_LIST from 'data/PARTNERS_LIST';
 
 import './Partners.scss';
 import Wrapper from 'shared/Wrapper';
+import Title from '../../../../ui/Title';
 
 const Partners: React.FC = () => {
     const bem = useBem('Partners');
@@ -15,7 +16,7 @@ const Partners: React.FC = () => {
     return (
         <section className={bem.block()}>
             <Wrapper>
-                <h2>Партнеры</h2>
+                <Title>Партнеры</Title>
 
                 <ul>
                     <Marquee
