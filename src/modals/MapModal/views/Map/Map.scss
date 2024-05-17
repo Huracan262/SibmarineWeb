@@ -1,5 +1,14 @@
 @use 'style/variables' as v;
 
 .Map {
-  width: 600px;
+  width: 1000px;
+  height: 500px;
+
+  &__iframe{
+    width: 1000px;
+    height: 500px;
+
+    border: none;
+    border-radius: 10px;
+  }
 }
