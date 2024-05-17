@@ -1,0 +1,33 @@
+@use 'style/variables' as v;
+
+.Menu {
+  &__item {
+
+  }
+
+  &__link, &__link * {
+    display: inline;
+    border: none;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: v.$color-light-blue;
+
+    transition: color 200ms ease-out;
+
+    &:hover {
+      color: v.$color-tiffany-blue;
+    }
+
+    &:active {
+
+    }
+  }
+
+  .current {
+    color: red !important;
+  }
+}

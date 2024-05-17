@@ -13,7 +13,7 @@ interface IMainNavigation {
     setNavMenuItem: any, // TODO - заменить "any"
 }
 
-const MainNavigation: React.FC<IMainNavigation> = ({navMenuItem ,setNavMenuItem}) => {
+const MainNavigation: React.FC<IMainNavigation> = ({navMenuItem}) => {
     const bem = useBem('MainNavigation');
 
     const {onMouseEnter, onMouseLeave} = useMouseEvents();
