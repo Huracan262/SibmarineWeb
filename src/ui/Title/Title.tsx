@@ -1,9 +1,9 @@
 import React from 'react';
 
+import {PiArrowRightThin} from 'react-icons/pi';
+
 import useBem from '@steroidsjs/core/hooks/useBem';
 import {Link} from '@steroidsjs/core/ui/nav';
-
-import {PiArrowRightThin} from 'react-icons/pi';
 
 import RouteId from 'enums/RouteId';
 import getWhiteModifier from 'utils/getWhiteModifier';

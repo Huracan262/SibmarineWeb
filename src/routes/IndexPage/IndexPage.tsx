@@ -21,11 +21,6 @@ export default function IndexPage() {
 
     return (
         <main className={bem.block()}>
-            Домашняя страница
-            <Link
-                toRoute={RouteId.ABOUT}
-                label='О компании'
-            />
             <Banner />
             <Service />
             <Catalog />

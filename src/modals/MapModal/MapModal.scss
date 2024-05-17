@@ -1,9 +1,10 @@
 @use 'style/variables' as v;
 
 .Map-Modal {
-  background-color: fade-out(black, 0.8);
-  box-shadow: 0 0 20px fade-out(white, 0.95);
+  background-color: fade-out(v.$color-dark-navy, 0.8);
+  box-shadow: 0 0 20px fade-out(white, 0.90);
 
+  border: 1px solid fade-out(white, 0.93);
   backdrop-filter: blur(10px);
 
   .ModalView__header {

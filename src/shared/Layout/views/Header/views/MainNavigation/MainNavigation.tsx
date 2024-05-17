@@ -9,10 +9,11 @@ import useMouseEvents from '../../hooks/useMouseEvents';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IMainNavigation {
+    navMenuItem: any, // TODO - заменить "any"
     setNavMenuItem: any, // TODO - заменить "any"
 }
 
-const MainNavigation: React.FC<IMainNavigation> = ({setNavMenuItem}) => {
+const MainNavigation: React.FC<IMainNavigation> = ({navMenuItem ,setNavMenuItem}) => {
     const bem = useBem('MainNavigation');
 
     const {onMouseEnter, onMouseLeave} = useMouseEvents();
@@ -23,14 +24,14 @@ const MainNavigation: React.FC<IMainNavigation> = ({setNavMenuItem}) => {
                 {DATA.map((item, id) => (
                     <li
                         className={bem.element('list-item')}
-                        onMouseEnter={() => onMouseEnter(item)}
+                        onMouseMove={() => onMouseEnter(item)}
                         onMouseLeave={onMouseLeave}
                         onFocus={() => onMouseEnter(item)}
                         onBlur={onMouseLeave}
                         key={id}
                     >
                         <Link
-                            className={bem.element('link')}
+                            className={`${bem.element('link')} ${item === navMenuItem ? 'current' : ''}`}
                             toRoute={item.url}
                         >
                             <span className={bem.element('icon')}>{item.icon}</span>

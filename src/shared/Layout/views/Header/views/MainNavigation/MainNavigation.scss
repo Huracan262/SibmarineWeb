@@ -7,17 +7,25 @@
 
   &__list {
     display: flex;
-    gap: 40px
+    //gap: 10px;
   }
 
   &__list-item {
   }
 
   &__link {
+    padding: 5px 40px;
     display: flex;
     align-items: center;
 
     font-size: 16px;
+
+    border-radius: 10px 10px 0 0;
+  }
+
+  .current {
+    background-color: fade-out(v.$color-light-blue, 0.9);
+    backdrop-filter: blur(3px)
   }
 
   &__icon {
