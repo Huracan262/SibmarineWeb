@@ -1,30 +1,56 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
-
-import Button from 'ui/Button';
+import emailjs from '@emailjs/browser';
 
 import './ApplicationForm.scss';
 import {Form, InputField, TextField} from '@steroidsjs/core/ui/form';
+import Button from '../../../../ui/Button';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IApplicationForm {
-
-}
+const EMAIL_SERVICE_ID = 'sibmarine-email-id';
+const EMAIL_TEMPLATE_ID = 'template_n4c8iil';
+const EMAIL_PUBLIC_KEY = 'g4hhz_Dx7lC27XHkc';
 
 const ApplicationForm: React.FC = ({...props}) => {
     const bem = useBem('ApplicationForm');
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => emailjs.init(EMAIL_PUBLIC_KEY), []);
+
+    const handleSubmit = async (phone: string, email: string, message: string) => {
+        try {
+            setLoading(true);
+            await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, {
+                phone,
+                email,
+                message,
+            });
+            // alert('email successfully sent check inbox');
+            setSuccess(true);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    if (success) {
+        return (
+            <aside className={bem.block()}>
+                <h2>Ваша заявка успешно отправлена!</h2>
+            </aside>
+        );
+    }
 
     return (
         <aside className={bem.block()}>
-            {/*<h2>Оставить заявку</h2>*/}
-
             <Form
                 className={bem.element('form')}
-                formId='FormBasicDemo'
-                useRedux
-                syncWithAddressBar
-                onSubmit={(values) => console.log('onSubmit', values)}
+                formId='FormRequest'
+                // useRedux
+                loading={loading}
+                onSubmit={values => handleSubmit(values.phone, values.email, values.message)}
                 fields={[
                     {
                         component: InputField,
@@ -47,34 +73,6 @@ const ApplicationForm: React.FC = ({...props}) => {
                 ]}
                 submitLabel={__('Отправить')}
             />
-
-            {/*<form>*/}
-            {/*    <div>*/}
-            {/*        <label htmlFor="name">Ваше имя:</label>*/}
-            {/*        <input*/}
-            {/*            type="text"*/}
-            {/*            name="name"*/}
-            {/*            id="name"*/}
-            {/*            maxLength={50}*/}
-            {/*            required*/}
-            {/*            placeholder="Ваше имя"*/}
-            {/*        />*/}
-            {/*    </div>*/}
-
-            {/*    <div>*/}
-            {/*        <label htmlFor="contacts">Контакты:</label>*/}
-            {/*        <input type="text" name="contacts" id="contacts" maxLength={50} required placeholder="email / телефон"/>*/}
-            {/*    </div>*/}
-
-            {/*    <div>*/}
-            {/*        <label htmlFor="text">Заявка:</label>*/}
-            {/*        <textarea name="text" id="text" rows={10} maxLength={200} required spellCheck placeholder="Введите ваш запрос" />*/}
-            {/*    </div>*/}
-
-            {/*    /!*<Button>Отправить</Button>*!/*/}
-            {/*</form>*/}
-
-            {/*<BsX className={styles.close} onClick={() => setToggleModal(false)} />*/}
         </aside>
     );
 };

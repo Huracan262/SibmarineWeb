@@ -12,7 +12,7 @@ const modals = [
         modalId: MAP_MODAL_ID,
         component: MapModal,
     }, {
-        title: 'Отправить заявку',
+        title: 'Заявка',
         modalId: APPLICATION_FORM_MODAL_ID,
         component: ApplicationFormModal,
     },

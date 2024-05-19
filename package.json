@@ -10,6 +10,7 @@
     "lint": "eslint -c ./.eslintrc --ext .js,.jsx,.ts,.tsx ./src"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@sentry/browser": "^5.27.3",
     "@steroidsjs/bootstrap": "^3.0.10",
     "@steroidsjs/core": "^3.0.11",
