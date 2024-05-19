@@ -18,7 +18,7 @@ const Button: React.FC<IButton> = ({children, onClick, className, disabled = fal
     return (
         <button
             className={`${bem.block()} ${className}`}
-            onClick={() => onClick}
+            onClick={onClick}
             disabled={disabled}
         >
             {children}

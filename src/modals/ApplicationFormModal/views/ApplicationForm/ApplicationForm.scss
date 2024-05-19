@@ -1,5 +1,7 @@
 @use 'style/variables' as v;
 
 .ApplicationForm {
-
+  &__form {
+    width: 600px;
+  }
 }

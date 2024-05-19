@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
-import {Link} from '@steroidsjs/core/ui/nav';
 
-import {getItems, isCurrent} from './utils/helpers';
+import {getItems} from './utils/helpers';
 import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './NavMenu.scss';
