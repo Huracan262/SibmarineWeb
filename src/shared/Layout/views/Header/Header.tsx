@@ -61,7 +61,7 @@ const Header: React.FC<IHeader> = ({...props}) => {
                                 placeholder='Поиск'
                             />
 
-                            <MainNavigation setNavMenuItem={setNavMenuItem} navMenuItem={navMenuItem}/>
+                            <MainNavigation setNavMenuItem={setNavMenuItem} navMenuItem={navMenuItem} />
                         </div>
                     </div>
 

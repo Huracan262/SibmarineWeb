@@ -3,5 +3,24 @@
 .ApplicationForm {
   &__form {
     width: 600px;
+
+    label {
+      color: v.$color-text-light;
+    }
+
+    input, textarea {
+      color: v.$color-text-light;
+
+      border-color: v.$color-light-blue;
+      background-color: transparent;
+
+      &:active {
+        border-color: v.$color-tiffany-blue;
+      }
+
+      & *::before {
+        border-color: v.$color-tiffany-blue;
+      }
+    }
   }
 }

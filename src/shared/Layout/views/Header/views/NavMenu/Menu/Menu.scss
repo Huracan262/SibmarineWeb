@@ -2,7 +2,7 @@
 
 .Menu {
   &__item {
-
+    padding: 5px;
   }
 
   &__link, &__link * {
@@ -19,7 +19,7 @@
     transition: color 200ms ease-out;
 
     &:hover {
-      color: v.$color-tiffany-blue;
+      color: v.$color-text-light;
     }
 
     &:active {
@@ -28,6 +28,14 @@
   }
 
   .current {
-    color: red !important;
+    background-color: fade-out(v.$color-light-blue, 0.8);
+
+    transition:
+      color 200ms ease-out,
+      background-color 200ms ease-out;
+
+    & * {
+      color: v.$color-text-light;
+    }
   }
 }

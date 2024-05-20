@@ -22,13 +22,13 @@ const Menu: React.FC<IMenu> = ({className, menu, menuParent = false, menuChildre
         <ul className={`${bem.block()} ${className}`}>
             {!menuChildren ? null : menu?.map((subMenu, index) => (
                 <li
-                    className={bem.element('item')}
+                    className={`${bem.element('item')} ${isCurrent(menuParent, subMenu) ? 'current' : ''}`}
                     key={index}
                 >
                     <Link className={bem.element('link')}>
                         <span
                             onMouseEnter={() => showMenu(subMenu)}
-                            className={`${bem.element('text')} ${isCurrent(menuParent, subMenu) ? 'current' : ''}`}
+                            className={bem.element('text')}
                         >
                             {subMenu.title}
                         </span>
