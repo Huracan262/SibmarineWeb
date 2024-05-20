@@ -9,11 +9,11 @@ import ModalPortal from '@steroidsjs/core/ui/modal/ModalPortal';
 import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
 
 import RouteId from 'enums/RouteId';
+import Theme from 'enums/Theme';
 
 import './Layout.scss';
 import Header from './views/Header';
 import Footer from './views/Footer';
-import Theme from '../../enums/Theme';
 
 // TODO - Отрефакторить код (перенести ХК)
 export default function Layout(props: React.PropsWithChildren<any>) {

@@ -1,12 +1,14 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {Link} from '@steroidsjs/core/ui/nav';
+
+import DATA from 'data/DATA';
+import Theme from 'enums/Theme';
+
+import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './MainNavigation.scss';
-import DATA from 'data/DATA';
-import {Link} from '@steroidsjs/core/ui/nav';
-import useMouseEvents from '../../hooks/useMouseEvents';
-import Theme from '../../../../../../enums/Theme';
 
 interface IMainNavigation {
     navMenuItem: any, // TODO - заменить "any"

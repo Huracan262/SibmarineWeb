@@ -6,14 +6,15 @@ import Logo from 'ui/Logo';
 import Wrapper from 'shared/Wrapper';
 import Contacts from 'shared/Contacts';
 import Button from 'ui/Button';
-
-import './Header.scss';
+import NavMenuContext from 'contexts/NavMenuContext';
+import Theme from 'enums/Theme';
 import useOpenModal from 'hooks/useOpenModal';
 import {APPLICATION_FORM_MODAL_ID} from 'modals/ApplicationFormModal/ApplicationFormModal';
+
 import MainNavigation from './views/MainNavigation';
 import NavMenu from './views/NavMenu';
-import NavMenuContext from '../../../../contexts/NavMenuContext';
-import Theme from '../../../../enums/Theme';
+
+import './Header.scss';
 
 interface IHeader {
     theme?: Theme,

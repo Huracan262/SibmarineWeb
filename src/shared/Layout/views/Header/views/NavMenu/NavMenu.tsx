@@ -2,13 +2,15 @@ import React, {useEffect, useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
+import Theme from 'enums/Theme';
+import getWhiteModifier from 'utils/getWhiteModifier';
+
 import {getItems} from './utils/helpers';
+import Menu from './Menu';
+
 import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './NavMenu.scss';
-import Menu from './Menu';
-import Theme from '../../../../../../enums/Theme';
-import getWhiteModifier from '../../../../../../utils/getWhiteModifier';
 
 interface INavMenu {
     item: any,

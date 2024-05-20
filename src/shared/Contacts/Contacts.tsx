@@ -4,12 +4,12 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import useOpenModal from 'hooks/useOpenModal';
 import {MAP_MODAL_ID} from 'modals/MapModal/MapModal';
+import Theme from 'enums/Theme';
 
 import './Contacts.scss';
-import Theme from '../../enums/Theme';
 
 interface IContacts {
-    theme?: Theme
+    theme?: Theme,
 }
 
 const Contacts = ({theme}: IContacts) => {
