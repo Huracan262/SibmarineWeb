@@ -5,6 +5,7 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 import Wrapper from 'shared/Wrapper';
 import Title from 'ui/Title';
 import getWhiteModifier from 'utils/getWhiteModifier';
+import Theme from 'enums/Theme';
 
 import './News.scss';
 
@@ -17,9 +18,9 @@ const News: React.FC<INews> = ({...props}) => {
     const bem = useBem('News');
 
     return (
-        <section className={getWhiteModifier(bem.block(), true)}>
+        <section className={getWhiteModifier(bem.block(), Theme.light)}>
             <Wrapper>
-                <Title white>Новости</Title>
+                <Title theme={Theme.light}>Новости</Title>
             </Wrapper>
         </section>
     );

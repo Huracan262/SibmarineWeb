@@ -7,16 +7,17 @@ import {Link} from '@steroidsjs/core/ui/nav';
 
 import RouteId from 'enums/RouteId';
 import getWhiteModifier from 'utils/getWhiteModifier';
+import Theme from 'enums/Theme';
 
 import './Title.scss';
 
 interface ITitle {
     children: string,
     link?: RouteId,
-    white?: boolean,
+    theme?: Theme,
 }
 
-const Title: React.FC<ITitle> = ({children, link, white = false}) => {
+const Title: React.FC<ITitle> = ({children, link, theme = Theme.dark}) => {
     const bem = useBem('Title');
 
     return (
@@ -24,9 +25,9 @@ const Title: React.FC<ITitle> = ({children, link, white = false}) => {
             className={bem.block()}
             toRoute={link}
         >
-            <h2 className={getWhiteModifier(bem.element('title'), white)}>
+            <h2 className={getWhiteModifier(bem.element('title'), theme)}>
                 {children}
-                <PiArrowRightThin className={getWhiteModifier(bem.element('icon'), white)} />
+                <PiArrowRightThin className={getWhiteModifier(bem.element('icon'), theme)} />
             </h2>
         </Link>
     );

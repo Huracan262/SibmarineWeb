@@ -55,7 +55,7 @@ const NavMenu = ({item, theme}: INavMenu) => {
             onMouseLeave={onMouseLeave}
             onFocus={() => onMouseEnter(item)}
             onBlur={onMouseLeave}
-            className={getWhiteModifier(bem.block(), true)}
+            className={getWhiteModifier(bem.block(), Theme.light)}
         >
             <h2 className={bem.element('title')}>{item.title}</h2>
 
