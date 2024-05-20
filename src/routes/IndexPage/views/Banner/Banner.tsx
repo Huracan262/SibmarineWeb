@@ -14,11 +14,17 @@ const Banner: React.FC<IBanner> = ({...props}) => {
     const bem = useBem('Banner');
 
     return (
-        <div className={bem.block()}>
+        <section className={bem.block()}>
+            <video className={bem.element('background-video')} src={`videos/background.mp4`} loop autoPlay muted/>
+
             <Wrapper>
-                {'Banner'}
+                <h1 className={bem.element('title')}>
+                    Полный цикл<br/>
+                    <span className={''}>обслуживания водного транспорта<br/>
+                        от проектирования до реализации</span>
+                </h1>
             </Wrapper>
-        </div>
+        </section>
     );
 };
 

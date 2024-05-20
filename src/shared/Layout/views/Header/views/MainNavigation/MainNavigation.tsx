@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
@@ -6,20 +6,21 @@ import './MainNavigation.scss';
 import DATA from 'data/DATA';
 import {Link} from '@steroidsjs/core/ui/nav';
 import useMouseEvents from '../../hooks/useMouseEvents';
+import Theme from '../../../../../../enums/Theme';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IMainNavigation {
     navMenuItem: any, // TODO - заменить "any"
     setNavMenuItem: any, // TODO - заменить "any"
+    theme?: Theme,
 }
 
-const MainNavigation: React.FC<IMainNavigation> = ({navMenuItem}) => {
+const MainNavigation = ({navMenuItem, setNavMenuItem, theme}: IMainNavigation) => {
     const bem = useBem('MainNavigation');
 
     const {onMouseEnter, onMouseLeave} = useMouseEvents();
 
     return (
-        <nav className={bem.block()}>
+        <nav className={bem.block('')}>
             <ul className={bem.element('list')}>
                 {DATA.map((item, id) => (
                     <li
@@ -31,11 +32,16 @@ const MainNavigation: React.FC<IMainNavigation> = ({navMenuItem}) => {
                         key={id}
                     >
                         <Link
-                            className={`${bem.element('link')} ${item === navMenuItem ? 'current' : ''}`}
+                            /* TODO - Сделать что-то с классами */
+                            className={`
+                                ${bem.element('link')}
+                                ${item === navMenuItem ? 'current' : ''}
+                                ${item === navMenuItem && theme === Theme.light ? 'current-light' : ''}
+                                `}
                             toRoute={item.url}
-                        >
-                            <span className={bem.element('icon')}>{item.icon}</span>
-                            <span className={bem.element('text')}>{item.title}</span>
+                        > {/* TODO - Переписать theme на функцию */}
+                            <span className={`${bem.element('icon')} ${theme === Theme.light ? 'light' : ''}`}>{item.icon}</span>
+                            <span className={`${bem.element('text')} ${theme === Theme.light ? 'light' : ''}`}>{item.title}</span>
                         </Link>
                     </li>
                 ))}

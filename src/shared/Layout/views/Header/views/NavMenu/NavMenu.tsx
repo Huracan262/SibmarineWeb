@@ -7,8 +7,15 @@ import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './NavMenu.scss';
 import Menu from './Menu';
+import Theme from '../../../../../../enums/Theme';
+import getWhiteModifier from '../../../../../../utils/getWhiteModifier';
 
-const NavMenu = ({item}: any) => {
+interface INavMenu {
+    item: any,
+    theme?: Theme,
+}
+
+const NavMenu = ({item, theme}: INavMenu) => {
     const bem = useBem('NavMenu');
     const {onMouseLeave, onMouseEnter} = useMouseEvents();
 
@@ -46,7 +53,7 @@ const NavMenu = ({item}: any) => {
             onMouseLeave={onMouseLeave}
             onFocus={() => onMouseEnter(item)}
             onBlur={onMouseLeave}
-            className={bem.block()}
+            className={getWhiteModifier(bem.block(), true)}
         >
             <h2 className={bem.element('title')}>{item.title}</h2>
 

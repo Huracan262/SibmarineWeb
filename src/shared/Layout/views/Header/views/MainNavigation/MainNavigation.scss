@@ -28,6 +28,14 @@
     backdrop-filter: blur(3px)
   }
 
+  .current-light {
+    background-color: fade-out(v.$color-dark-navy, 0.3);
+
+    .icon, span {
+      color: v.$color-text-light;
+    }
+  }
+
   &__icon {
     margin-right: 5px;
     position: relative;
@@ -38,5 +46,9 @@
 
   &__text {
     color: v.$color-text-light;
+  }
+
+  .light {
+    color: v.$color-text-dark;
   }
 }

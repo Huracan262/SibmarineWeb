@@ -1,5 +1,35 @@
 @use 'style/variables' as v;
 
 .Banner {
+  padding-top: 150px;
+  padding-bottom: 300px;
+  position: relative;
+  top: -150px;
+  z-index: -1;
 
+  overflow: hidden;
+  //border: 5px solid red;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent, v.$color-dark-navy);
+  }
+
+  &__background-video {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+
+    z-index: -1;
+  }
+
+  &__title {
+    padding: 150px 0;
+  }
 }

@@ -13,13 +13,13 @@ import {APPLICATION_FORM_MODAL_ID} from 'modals/ApplicationFormModal/Application
 import MainNavigation from './views/MainNavigation';
 import NavMenu from './views/NavMenu';
 import NavMenuContext from '../../../../contexts/NavMenuContext';
+import Theme from '../../../../enums/Theme';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IHeader {
-
+    theme?: Theme,
 }
 
-const Header: React.FC<IHeader> = ({...props}) => {
+const Header = ({theme} : IHeader) => {
     const bem = useBem('Header');
 
     const openModal = useOpenModal(APPLICATION_FORM_MODAL_ID);
@@ -28,7 +28,7 @@ const Header: React.FC<IHeader> = ({...props}) => {
     const [timerId, setTimerId] = useState(null);
 
     return (
-        <header className={bem.block()}>
+        <header className={`${bem.block()} ${theme === Theme.light ? 'light' : ''}`}> {/* TODO - Переписать на getWhiteModifier*/}
             <NavMenuContext.Provider value={{
                 navMenuItem,
                 setNavMenuItem,
@@ -39,12 +39,12 @@ const Header: React.FC<IHeader> = ({...props}) => {
                     <Logo
                         className={bem.element('logo')}
                         size='150'
-                        color='white'
+                        color={theme === Theme.light ? '#333333' : '#ffffff'}
                     />
 
                     <div className={bem.element('container')}>
                         <div className={bem.element('row-top')}>
-                            <Contacts />
+                            <Contacts theme={theme} />
 
                             <Button
                                 className={bem.element('button')}
@@ -61,11 +61,11 @@ const Header: React.FC<IHeader> = ({...props}) => {
                                 placeholder='Поиск'
                             />
 
-                            <MainNavigation setNavMenuItem={setNavMenuItem} navMenuItem={navMenuItem} />
+                            <MainNavigation theme={theme} setNavMenuItem={setNavMenuItem} navMenuItem={navMenuItem} />
                         </div>
                     </div>
 
-                    {navMenuItem && <NavMenu item={navMenuItem} />}
+                    {navMenuItem && <NavMenu theme={theme} item={navMenuItem} />}
                 </Wrapper>
             </NavMenuContext.Provider>
         </header>

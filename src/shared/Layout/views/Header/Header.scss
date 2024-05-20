@@ -20,6 +20,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 50%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      background-color: fade-out(v.$color-text-dark, 0.9);
+    }
   }
 
   &__button {

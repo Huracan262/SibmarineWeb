@@ -6,7 +6,6 @@ import useLayout, {STATUS_LOADING, STATUS_OK} from '@steroidsjs/core/hooks/useLa
 import {Notifications} from '@steroidsjs/core/ui/layout';
 import Portal from '@steroidsjs/core/ui/layout/Portal';
 import ModalPortal from '@steroidsjs/core/ui/modal/ModalPortal';
-import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
 
 import RouteId from 'enums/RouteId';
@@ -14,6 +13,7 @@ import RouteId from 'enums/RouteId';
 import './Layout.scss';
 import Header from './views/Header';
 import Footer from './views/Footer';
+import Theme from '../../enums/Theme';
 
 // TODO - Отрефакторить код (перенести ХК)
 export default function Layout(props: React.PropsWithChildren<any>) {
@@ -30,7 +30,7 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
     return (
         <div className={bem.block()}>
-            <Header />
+            <Header theme={routeId === RouteId.HOME ? Theme.light : Theme.dark} />
 
             <div className={bem.element('content')}>
                 <Notifications />
