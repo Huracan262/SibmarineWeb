@@ -29,7 +29,7 @@ const Header = ({theme} : IHeader) => {
     const [timerId, setTimerId] = useState(null);
 
     return (
-        <header className={`${bem.block()} ${theme === Theme.light ? 'light' : ''}`}> {/* TODO - Переписать на getWhiteModifier*/}
+        <header className={`${bem.block()} ${theme === Theme.light ? 'light' : ''/* TODO - Переписать на getWhiteModifier*/}`}>
             <NavMenuContext.Provider value={{
                 navMenuItem,
                 setNavMenuItem,
@@ -62,11 +62,19 @@ const Header = ({theme} : IHeader) => {
                                 placeholder='Поиск'
                             />
 
-                            <MainNavigation theme={theme} setNavMenuItem={setNavMenuItem} navMenuItem={navMenuItem} />
+                            <MainNavigation
+                                theme={theme}
+                                navMenuItem={navMenuItem}
+                            />
                         </div>
                     </div>
 
-                    {navMenuItem && <NavMenu theme={theme} item={navMenuItem} />}
+                    {navMenuItem && (
+                        <NavMenu
+                            theme={theme}
+                            item={navMenuItem}
+                        />
+                    )}
                 </Wrapper>
             </NavMenuContext.Provider>
         </header>

@@ -12,11 +12,10 @@ import './MainNavigation.scss';
 
 interface IMainNavigation {
     navMenuItem: any, // TODO - заменить "any"
-    setNavMenuItem: any, // TODO - заменить "any"
     theme?: Theme,
 }
 
-const MainNavigation = ({navMenuItem, setNavMenuItem, theme}: IMainNavigation) => {
+const MainNavigation = ({navMenuItem, theme}: IMainNavigation) => {
     const bem = useBem('MainNavigation');
 
     const {onMouseEnter, onMouseLeave} = useMouseEvents();
@@ -41,7 +40,8 @@ const MainNavigation = ({navMenuItem, setNavMenuItem, theme}: IMainNavigation) =
                                 ${item === navMenuItem && theme === Theme.light ? 'current-light' : ''}
                                 `}
                             toRoute={item.url}
-                        > {/* TODO - Переписать theme на функцию */}
+                        >
+                            {/* TODO - Переписать theme на функцию */}
                             <span className={`${bem.element('icon')} ${theme === Theme.light ? 'light' : ''}`}>{item.icon}</span>
                             <span className={`${bem.element('text')} ${theme === Theme.light ? 'light' : ''}`}>{item.title}</span>
                         </Link>
