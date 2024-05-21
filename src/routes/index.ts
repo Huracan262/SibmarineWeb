@@ -4,6 +4,7 @@ import RouteId from 'enums/RouteId';
 
 import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
+import ItemPage from './ItemPage';
 
 const roles = [null];
 
@@ -20,6 +21,14 @@ export default {
             exact: true,
             path: '/about',
             component: AboutPage,
+            roles,
+        },
+        [RouteId.ITEM]: {
+            id: RouteId.ITEM,
+            label: 'Карточка товара',
+            exact: true,
+            path: '/item',
+            component: ItemPage,
             roles,
         },
     },

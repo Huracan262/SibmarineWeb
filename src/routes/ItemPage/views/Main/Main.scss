@@ -1,0 +1,106 @@
+@use "style/variables" as v;
+
+.Main {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  &__slider {
+    width: 680px;
+    height: 480px;
+    margin-right: 40px;
+
+    //outline: 1px solid red;
+  }
+
+  &__main {
+    //outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &__product-code {
+    //font-family: "Geologica", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    //color: v.$color-border-lines;
+  }
+
+  &__manufacturer-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+  }
+
+  &__price {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  &__addition-container {
+    margin-bottom: 20px;
+    display: flex;
+
+    & > * {
+      margin-right: auto;
+    }
+  }
+
+  &__availability {
+    margin-bottom: auto;
+
+    color: lime;
+  }
+
+  &__short-lists {
+    //outline: 1px solid blue;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    & > * { // div block TODO - Временное решение
+      //outline: 1px solid orange;
+
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; // TODO - Тест
+
+      & > h3 {
+        margin-bottom: 20px;
+
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+      }
+
+      & > ul {
+
+        & > li {
+          list-style: disc inside;
+
+          margin-bottom: 10px;
+
+          font-size: 16px;
+          font-weight: 200;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@ const Footer: React.FC<IFooter> = ({...props}) => {
     return (
         <footer className={bem.block()}>
             <Wrapper>
-                Я футер и мне стыдно!
+                Здесь будет подвал сайта!!
             </Wrapper>
         </footer>
     );
