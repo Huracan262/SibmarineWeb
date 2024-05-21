@@ -22,14 +22,17 @@ export default function IndexPage() {
     return (
         <main className={bem.block()}>
             <Banner />
-            <Service />
-            <Catalog />
-            <News />
-            <Advantages />
-            <Partners />
-            <Geography />
-            <Clients />
-            <Warranty />
+
+            <div className={bem.element('container')}>
+                <Service />
+                <Catalog />
+                <News />
+                <Advantages />
+                <Partners />
+                <Geography />
+                <Clients />
+                <Warranty />
+            </div>
         </main>
     );
 }

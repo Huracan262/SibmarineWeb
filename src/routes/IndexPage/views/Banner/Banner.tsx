@@ -20,9 +20,14 @@ const Banner: React.FC<IBanner> = ({...props}) => {
 
             <Wrapper>
                 <h1 className={bem.element('title')}>
-                    Полный цикл<br/>
-                    <span className={''}>обслуживания водного транспорта<br/>
-                        от проектирования до реализации</span>
+                    <span className='visually-hidden'>SibMarine</span>
+                    Полный цикл
+                    <br />
+                    <span className={bem.element('title-additional')}>
+                        обслуживания водного транспорта
+                        <br />
+                        от проектирования до реализации
+                    </span>
                 </h1>
             </Wrapper>
         </section>

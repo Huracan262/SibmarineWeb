@@ -2,13 +2,12 @@
 
 .Banner {
   padding-top: 150px;
-  padding-bottom: 300px;
+  padding-bottom: 150px;
   position: relative;
   top: -150px;
   z-index: -1;
 
   overflow: hidden;
-  //border: 5px solid red;
 
   &::before {
     content: "";
@@ -16,7 +15,7 @@
     height: 300px;
     position: absolute;
     bottom: 0;
-    background-image: linear-gradient(to bottom, transparent, v.$color-dark-navy);
+    background-image: linear-gradient(to bottom, transparent 0%, v.$color-dark-navy 100%);
   }
 
   &__background-video {
@@ -25,11 +24,23 @@
     top: 0;
     left: 50%;
     transform: translatex(-50%);
+    //filter: blur(3px);
 
     z-index: -1;
   }
 
   &__title {
-    padding: 150px 0;
+    padding: 150px 0 0;
+
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    //color: fade-out(v.$color-text-dark, 0.3);
+  }
+
+  &__title-additional {
+    font-size: 50px;
+    font-weight: 300;
   }
 }

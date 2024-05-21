@@ -1,5 +1,7 @@
 @use 'style/variables';
 
 .IndexPage {
-
+ &__container {
+   margin-top: -150px;
+ }
 }
