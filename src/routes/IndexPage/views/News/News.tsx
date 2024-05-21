@@ -4,25 +4,34 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import Wrapper from 'shared/Wrapper';
 import Title from 'ui/Title';
-import getWhiteModifier from 'utils/getWhiteModifier';
 import Theme from 'enums/Theme';
+import NEWS_LIST from 'data/NEWS_LIST';
+import getWhiteModifier from 'utils/getWhiteModifier';
+
+import NewsElement from './views/NewsElement';
 
 import './News.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface INews {
-
+    theme?: Theme,
 }
 
-const News: React.FC<INews> = ({...props}) => {
+const News = ({theme}: INews) => {
     const bem = useBem('News');
 
     return (
-        <section className={getWhiteModifier(bem.block(), Theme.light)}>
+        <article className={getWhiteModifier(bem.block(), theme)}>
             <Wrapper>
-                <Title theme={Theme.light}>Новости</Title>
+                <Title theme={theme}>Новости</Title>
+
+                {NEWS_LIST.map((item, index) => (
+                    <NewsElement
+                        element={item}
+                        key={index}
+                    />
+                ))}
             </Wrapper>
-        </section>
+        </article>
     );
 };
 

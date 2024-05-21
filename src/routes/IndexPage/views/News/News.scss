@@ -1,5 +1,14 @@
 @use 'style/variables' as v;
+@import 'style/mixins';
 
 .News {
+  padding-bottom: 50px;
+}
 
+.News--white {
+  @include blockShadows(top);
+
+  color: v.$color-text-dark;
+
+  background-color: v.$color-light-background;
 }

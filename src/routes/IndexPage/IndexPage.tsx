@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {useBem} from '@steroidsjs/core/hooks';
-import {Link} from '@steroidsjs/core/ui/nav';
 
-import RouteId from 'enums/RouteId';
+import Theme from 'enums/Theme';
 
 import Banner from './views/Banner';
 import Service from './views/Service';
@@ -26,7 +25,7 @@ export default function IndexPage() {
             <div className={bem.element('container')}>
                 <Service />
                 <Catalog />
-                <News />
+                <News theme={Theme.light} />
                 <Advantages />
                 <Partners />
                 <Geography />
