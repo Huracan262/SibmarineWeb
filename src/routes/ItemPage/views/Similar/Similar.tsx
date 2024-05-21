@@ -3,7 +3,6 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Similar.scss';
-import {Link} from '@steroidsjs/core/ui/nav';
 
 interface ISimilar {
     item: any, // TODO - any
