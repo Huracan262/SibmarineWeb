@@ -5,10 +5,10 @@ import Marquee from 'react-fast-marquee';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import PARTNERS_LIST from 'data/PARTNERS_LIST';
+import Title from 'ui/Title';
+import Wrapper from 'shared/Wrapper';
 
 import './Partners.scss';
-import Wrapper from 'shared/Wrapper';
-import Title from '../../../../ui/Title';
 
 const Partners: React.FC = () => {
     const bem = useBem('Partners');
@@ -18,16 +18,20 @@ const Partners: React.FC = () => {
             <Wrapper>
                 <Title>Партнеры</Title>
 
-                <ul>
+                <ul className={bem.element('list')}>
                     <Marquee
                         speed={30}
                         gradient
                         gradientColor="#162639"
                         style={{overflow: 'clip'}}
                     >
-                        {PARTNERS_LIST.map(item => (
-                            <li key={item.title}>
+                        {PARTNERS_LIST.map((item, index) => (
+                            <li
+                                className={bem.element('item')}
+                                key={index}
+                            >
                                 <img
+                                    className={bem.element('img')}
                                     src={item.src}
                                     alt={item.title}
                                 />
