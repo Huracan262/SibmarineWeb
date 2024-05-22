@@ -26,7 +26,7 @@ export default function IndexPage() {
                 <Service />
                 <Catalog />
                 <News theme={Theme.light} />
-                <Advantages />
+                <Advantages theme={Theme.light} />
                 <Partners />
                 <Geography />
                 <Clients />
