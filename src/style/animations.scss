@@ -1,0 +1,11 @@
+@keyframes blinkPoint {
+  from {
+    transform: scale(0.4);
+
+  } 60% {
+      opacity: 0.15;
+    }
+  to {
+    opacity: 0;
+  }
+}
