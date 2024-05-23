@@ -3,7 +3,7 @@ import React from 'react';
 import './Logo.scss';
 
 interface ILogo {
-    className: string,
+    className?: string,
     color?: string,
     size?: string,
 }

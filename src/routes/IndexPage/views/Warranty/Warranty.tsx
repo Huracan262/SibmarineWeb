@@ -12,7 +12,6 @@ import getWhiteModifier from 'utils/getWhiteModifier';
 
 import './Warranty.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IWarranty {
     theme: Theme,
 }
