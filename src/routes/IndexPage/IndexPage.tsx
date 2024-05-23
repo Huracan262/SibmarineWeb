@@ -30,7 +30,7 @@ export default function IndexPage() {
                 <Partners />
                 <Geography />
                 <Clients />
-                <Warranty />
+                <Warranty theme={Theme.light} />
             </div>
         </main>
     );

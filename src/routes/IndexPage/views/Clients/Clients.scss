@@ -1,6 +1,8 @@
 @use 'style/variables' as v;
 
 .Clients {
+  padding-bottom: 50px;
+
   &__container {
     display: flex;
     justify-content: space-between;
