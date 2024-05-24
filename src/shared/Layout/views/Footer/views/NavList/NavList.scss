@@ -1,5 +1,29 @@
 @use 'style/variables' as v;
 
 .NavList {
+  &__nav-title {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
 
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid v.$color-border-lines;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
 }

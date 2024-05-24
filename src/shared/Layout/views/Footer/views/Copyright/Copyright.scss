@@ -1,0 +1,39 @@
+@use 'style/variables' as v;
+
+.Copyright {
+  margin-top: 50px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  border-top: 1px solid fade-out(dimgray, 0.8);
+
+  &__text, &__link, &__description, &__author-link {
+    font-family: "Geologica", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: v.$color-border-lines;
+  }
+
+  &__text {
+    width: 50%;
+    align-self: center;
+  }
+
+  &__link * {
+    color: v.$color-tiffany-blue !important;
+  }
+
+  &__author-link {
+    margin-left: 5px;
+  }
+
+  &__link:hover,
+  &__author-link:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+}

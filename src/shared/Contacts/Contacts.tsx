@@ -10,15 +10,16 @@ import './Contacts.scss';
 
 interface IContacts {
     theme?: Theme,
+    className?: string,
 }
 
-const Contacts = ({theme}: IContacts) => {
+const Contacts = ({theme, className}: IContacts) => {
     const bem = useBem('Contacts');
 
     const openModal = useOpenModal(MAP_MODAL_ID);
 
     return (
-        <address className={bem.block()}>
+        <address className={`${bem.block()} ${className}`}>
             <button
                 /* TODO - Переписать модификатор на функцию */
                 className={`${bem.element('item')} ${theme === Theme.light ? 'light' : ''}`}

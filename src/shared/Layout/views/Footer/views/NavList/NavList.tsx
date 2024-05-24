@@ -20,13 +20,13 @@ const NavList: React.FC<INavList> = ({item}) => {
             <ul className={bem.element('list')}>
 
                 {item.items
-                    .slice(0, 10)
+                    .slice(0, 8)
                     .map((el, index) => (
                         <li
                             className={bem.element('item')}
                             key={index}
                         >
-                            <a className="footer-navigation__item-link">{el.title}</a>
+                            <a className={bem.element('link')}>{el.title}</a>
                         </li>
                     ))}
             </ul>

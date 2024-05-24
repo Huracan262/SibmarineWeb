@@ -1,5 +1,41 @@
 @use 'style/variables' as v;
 
 .Footer {
+  padding: 100px 0 0;
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container2 {
+    //outline: 1px solid tomato;
+    margin-right: 50px;
+  }
+
+  &__contacts {
+    margin: 20px 0;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__socials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__social {
+  }
+
+  &__social-link {
+    font-size: 30px;
+  }
+
+  &__nav-lists {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    //outline: 1px solid blue;
+  }
 }
