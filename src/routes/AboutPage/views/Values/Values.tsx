@@ -2,6 +2,9 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
+import Wrapper from 'shared/Wrapper';
+import Title from 'ui/Title';
+
 import './Values.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -14,27 +17,28 @@ const Values: React.FC<IValues> = ({...props}) => {
 
     return (
         <section className={bem.block()}>
-            <div className={styles.wrapper}>
+            <Wrapper>
                 <Title>Наши ценности</Title>
 
-                <ul className={styles.cennostiList}>
-                    <li className={styles.cennostiItem}>
-                        <h3 className={styles.cennostiTitle}>Ценность</h3>
+                {/*TODO - Оптимизировать ul*/}
+                <ul className={bem.element('list')}>
+                    <li className={bem.element('item')}>
+                        <h3 className={bem.element('item-title')}>Ценность</h3>
                     </li>
 
-                    <li className={styles.cennostiItem}>
-                        <h3 className={styles.cennostiTitle}>Ценность</h3>
+                    <li className={bem.element('item')}>
+                        <h3 className={bem.element('item-title')}>Ценность</h3>
                     </li>
 
-                    <li className={styles.cennostiItem}>
-                        <h3 className={styles.cennostiTitle}>Ценность</h3>
+                    <li className={bem.element('item')}>
+                        <h3 className={bem.element('item-title')}>Ценность</h3>
                     </li>
 
-                    <li className={styles.cennostiItem}>
-                        <h3 className={styles.cennostiTitle}>Ценность</h3>
+                    <li className={bem.element('item')}>
+                        <h3 className={bem.element('item-title')}>Ценность</h3>
                     </li>
                 </ul>
-            </div>
+            </Wrapper>
         </section>
     );
 };

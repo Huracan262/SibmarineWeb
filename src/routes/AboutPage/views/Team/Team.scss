@@ -1,5 +1,42 @@
 @use 'style/variables' as v;
 
 .Team {
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+  }
 
+  &__item {
+    width: 400px;
+    height: 400px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+  }
+
+  &__item-title {
+  }
+
+  &__text {
+  }
+
+  &__img {
+    order: -1;
+
+    height: auto;
+
+    background-color: v.$color-border-lines;
+  }
+}
+
+.Team--white {
+  color: v.$color-text-dark;
+
+  background-color: v.$color-light-background;
 }

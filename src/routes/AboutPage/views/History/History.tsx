@@ -2,10 +2,14 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
-import './History.scss';
-import Title from '../../../../ui/Title';
+import Marquee from 'react-fast-marquee';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+import Title from 'ui/Title';
+import Wrapper from 'shared/Wrapper';
+
+import './History.scss';
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface162639
 interface IHistory {
 
 }
@@ -15,38 +19,44 @@ const History: React.FC<IHistory> = ({...props}) => {
 
     return (
         <section className={bem.block()}>
-            <div className={styles.wrapper}>
+            <Wrapper>
                 <Title>История</Title>
 
-                <ol className={styles.historyList}>
-                    <Marquee pauseOnHover="true" gradient="gradient" gradientColor="#D3D3D3" speed="30" style={{overflow: 'clip'}}>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                <ol className={bem.element('list')}>
+                    <Marquee
+                        pauseOnHover={true}
+                        gradient
+                        gradientColor="#162639"
+                        speed={30}
+                        style={{overflow: 'clip'}}
+                    >
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
-                        <li className={styles.historyItem}>
-                            <h3 className={styles.historyTitle}>2012</h3>
-                            <p>Тут текст информации по дате</p>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2012</h3>
+                            <p className={bem.element('text')}>Тут текст информации по дате</p>
                         </li>
                     </Marquee>
                 </ol>
-            </div>
+            </Wrapper>
         </section>
     );
 };

@@ -2,43 +2,53 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
+import Title from 'ui/Title';
+import MEMBERS_LIST from 'data/MEMBERS_LIST';
+import Wrapper from 'shared/Wrapper';
+import Theme from 'enums/Theme';
+import getWhiteModifier from 'utils/getWhiteModifier';
+
+import AvatarUndefined from '/public/images/team/undefined.png'
+
 import './Team.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ITeam {
-
+    theme: Theme
 }
 
-const Team: React.FC<ITeam> = ({...props}) => {
+const Team = ({theme}: ITeam) => {
     const bem = useBem('Team');
 
     return (
-        <section className={bem.block()}>
-            <div className={styles.wrapper}>
-                <Title>Наши сотрудники</Title>
+        <section className={getWhiteModifier(bem.block(), theme)}>
+            <Wrapper>
+                <Title theme={theme}>Наши сотрудники</Title>
 
-                <ul className={styles.teamList}>
+                <ul className={bem.element('list')}>
                     {MEMBERS_LIST.map(({
-                        id,
                         position,
                         name,
                         photoUrl
-                    }) => {
-                        return (
-                            <li className={styles.teamItem} key={id}>
-                                <figure className={styles.teamFigure}>
-                                    <figcaption className={styles.teamFigcaption}>
-                                        <h3 className={styles.teamName}>{name}</h3>
-                                        <p className={styles.teamDescription}>{position}</p>
-                                    </figcaption>
+                    }, index: number) => (
+                        <li
+                            className={bem.element('item')}
+                            key={index}
+                        >
+                            <figure className={bem.element('container')}>
+                                <figcaption className={bem.element('description')}>
+                                    <h3 className={bem.element('item-title')}>{name}</h3>
+                                    <p className={bem.element('text')}>{position}</p>
+                                </figcaption>
 
-                                    <img className={styles.teamImg} src={!!photoUrl ? photoUrl : undefined} alt={name}/>
-                                </figure>
-                            </li>
-                        )
-                    })}
+                                <img
+                                    className={bem.element('img')}
+                                    src={!!photoUrl ? photoUrl : AvatarUndefined}
+                                    alt={name}/>
+                            </figure>
+                        </li>
+                    ))}
                 </ul>
-            </div>
+            </Wrapper>
         </section>
     );
 };

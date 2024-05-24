@@ -1,5 +1,13 @@
 @use 'style/variables' as v;
+@import 'style/mixins';
 
 .Application {
 
+}
+
+.Application--white {
+  color: v.$color-text-dark;
+
+  background-color: v.$color-light-background;
+  @include blockShadows(bot);
 }

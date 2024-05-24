@@ -1,5 +1,32 @@
 @use 'style/variables' as v;
 
 .Directions {
+  &__container {
+    display: flex;
+    gap: 80px;
+  }
 
+  &__picture {
+    width: 500px;
+    height: 500px;
+
+    background-color: v.$color-border-lines;
+  }
+
+  &__img {
+
+  }
+
+  &__list {
+    flex-grow: 1;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px;
+
+    text-align: right;
+
+    border-bottom: 1px solid v.$color-border-lines;
+  }
 }

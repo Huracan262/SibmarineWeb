@@ -6,38 +6,38 @@ import useOpenModal from 'hooks/useOpenModal';
 
 import './AboutPage.scss';
 import Wrapper from '../../shared/Wrapper';
+import Theme from 'enums/Theme';
+
 import Banner from './views/Banner';
 import History from './views/History';
 import Values from './views/Values';
 import Directions from './views/Directions';
 import Statistics from './views/Statistics';
 import Team from './views/Team';
-import Application from '../../Application';
+import Application from './views/Application';
 
 const AboutPage: React.FC = () => {
     const bem = useBem('AboutPage');
 
     return (
-        <main className={styles.pageAbout}>
-            <Wrapper>
-                {/*<div className={styles.wrapper}>*/}
-                {/*    <Breadcrumb/>*/}
-                {/*</div>*/}
+        <main className={bem.block()}>
+            {/*<div className={styles.wrapper}>*/}
+            {/*    <Breadcrumb/>*/}
+            {/*</div>*/}
 
-                <Banner />
+            <Banner className={bem.element('banner')} />
 
-                <History />
+            <History />
 
-                <Values />
+            <Values />
 
-                <Directions />
+            <Directions />
 
-                <Statistics />
+            <Statistics theme={Theme.light} />
 
-                <Team />
+            <Team theme={Theme.light} />
 
-                <Application />
-            </Wrapper>
+            <Application theme={Theme.light} />
         </main>
     );
 };
