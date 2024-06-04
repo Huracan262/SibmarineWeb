@@ -14,7 +14,7 @@ const Wrapper = ({children, className}: IWrapper) => {
     const bem = useBem('Wrapper');
 
     return (
-        <div className={`${bem.block()} ${className}`}>
+        <div className={`${bem.block()} ${className ?? ''}`}>
             {children}
         </div>
     );

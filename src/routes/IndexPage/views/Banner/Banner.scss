@@ -2,12 +2,16 @@
 
 .Banner {
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 500px;
   position: relative;
   top: -150px;
   z-index: -1;
 
   overflow: hidden;
+
+  &__wrapper {
+    height: 100%;
+  }
 
   &::before {
     content: "";

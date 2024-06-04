@@ -16,9 +16,15 @@ const Banner: React.FC<IBanner> = ({...props}) => {
 
     return (
         <section className={bem.block()}>
-            <video className={bem.element('background-video')} src={`videos/background.mp4`} loop autoPlay muted/>
+            <video
+                className={bem.element('background-video')}
+                src='videos/background.mp4'
+                loop
+                autoPlay
+                muted
+            />
 
-            <Wrapper>
+            <Wrapper className={bem.element('wrapper')}>
                 <h1 className={bem.element('title')}>
                     <span className='visually-hidden'>SibMarine</span>
                     Полный цикл
