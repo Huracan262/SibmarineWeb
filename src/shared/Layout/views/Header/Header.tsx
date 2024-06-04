@@ -59,7 +59,7 @@ const Header = ({theme} : IHeader) => {
                             <input
                                 className={bem.element('search')}
                                 type='text'
-                                placeholder='Поиск'
+                                placeholder=''
                             />
 
                             <MainNavigation
