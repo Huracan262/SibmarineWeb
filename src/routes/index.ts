@@ -5,6 +5,7 @@ import RouteId from 'enums/RouteId';
 import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
 import ItemPage from './ItemPage';
+import ContactsPage from './ContactsPage';
 
 const roles = [null];
 
@@ -29,6 +30,14 @@ export default {
             exact: true,
             path: '/item',
             component: ItemPage,
+            roles,
+        },
+        [RouteId.CONTACTS]: {
+            id: RouteId.CONTACTS,
+            label: 'Контакты',
+            exact: true,
+            path: '/contacts',
+            component: ContactsPage,
             roles,
         },
     },

@@ -1,6 +1,7 @@
 @use 'style/variables' as v;
 
 .Footer {
+  border-top: 1px solid v.$color-border-lines;
   padding: 100px 0 0;
 
   &__container {
