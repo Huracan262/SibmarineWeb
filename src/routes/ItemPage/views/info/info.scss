@@ -15,6 +15,11 @@
     padding: 10px 40px;
 
     font-size: 18px;
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    transition: border-color 200ms ease-out;
   }
 
   .current {

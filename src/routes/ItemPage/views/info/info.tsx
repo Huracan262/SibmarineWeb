@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './info.scss';
+import tabs from './data/tabs';
 
 interface Iinfo {
     item: any, // TODO - any
@@ -11,12 +12,20 @@ interface Iinfo {
 const info = ({item}: Iinfo) => {
     const bem = useBem('info');
 
+    const [currentTab, setCurrentTab] = useState(tabs[0]);
+
     return (
         <section className={bem.block()}>
             <ul className={bem.element('tabs')}>
-                <li className={`${bem.element('tab')} current`}>Описание</li>
-                <li className={bem.element('tab')}>Характеристики</li>
-                <li className={bem.element('tab')}>Комплектация</li>
+                {tabs.map((tab: string, index: number) => (
+                    <li
+                        className={`${bem.element('tab')} ${tab === currentTab ? 'current' : ''}`}
+                        onClick={() => setCurrentTab(tab)}
+                        key={index}
+                    >
+                        {tab}
+                    </li>
+                ))}
             </ul>
 
             <div className={bem.element('content')}>

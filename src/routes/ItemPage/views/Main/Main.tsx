@@ -5,6 +5,7 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 import Availability from 'enums/Availability';
 
 import './Main.scss';
+import Button from '../../../../ui/Button';
 
 interface IMain {
     item: any, // TODO - any
@@ -44,8 +45,8 @@ const Main = ({item}: IMain) => {
                         1200
                         <span>₽</span>
                     </span>
-                    <button>Добавить в избранное</button>
-                    <button>К сравнению</button>
+
+                    <Button>Приобрести</Button>
                 </div>
 
                 <small className={bem.element('availability')}>{Availability.Availability}</small>
