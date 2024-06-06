@@ -2,21 +2,18 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
-import item from 'mocks/item/item';
 import Wrapper from 'shared/Wrapper';
 
 import Main from './views/Main';
 import Info from './views/info';
 import Similar from './views/Similar';
 
+import catalogItems from '../../data/catalog/itemTest';
+import {ICatalogItem} from '../../data/catalog/data';
+
 import './ItemPage.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IItemPage {
-
-}
-
-const ItemPage: React.FC<IItemPage> = ({...props}) => {
+const ItemPage = (item: ICatalogItem) => {
     const bem = useBem('ItemPage');
 
     return (
