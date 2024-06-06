@@ -1,4 +1,4 @@
-import { ICatalogItem, CatalogItem } from './data';
+import {ICatalogItem, CatalogItem} from './data';
 
 const catalogItems: ICatalogItem[] = [
     new CatalogItem(
