@@ -14,12 +14,13 @@ interface IDATA {
 const DATA: IDATA[] = [
     {
         title: 'Каталог',
-        url: '/catalog',
+        url: RouteId.CATALOG,
         icon: <FaList />,
         items: [
             {
                 title: 'Механизмы',
                 url: '/catalog/mechanisms',
+                img: '',
                 items: [
                     {
                         title: 'Стропа',
@@ -80,6 +81,7 @@ const DATA: IDATA[] = [
             {
                 title: 'Электрооборудование',
                 url: '/catalog/elektro',
+                img: '',
                 items: [
                     {
                         title: 'Автоматический выключатель',
@@ -140,6 +142,7 @@ const DATA: IDATA[] = [
             {
                 title: 'Радионавигационное оборудование',
                 url: '/catalog/radio',
+                img: '',
                 items: [
                     {
                         title: 'Локатор',
@@ -201,12 +204,13 @@ const DATA: IDATA[] = [
     },
     {
         title: 'Услуги',
-        url: '/services',
+        url: RouteId.SERVICES,
         icon: <MdBuild />,
         items: [
             {
                 title: 'По радио-навигационному оборудованию',
                 url: '/services/radio-nav',
+                img: '',
                 items: [
                     {
                         title: 'Установка GPS систем',
@@ -267,6 +271,7 @@ const DATA: IDATA[] = [
             {
                 title: 'По электрическому оборудованию',
                 url: '/services/electrical',
+                img: '',
                 items: [
                     {
                         title: 'Монтаж электропроводки',
@@ -327,6 +332,7 @@ const DATA: IDATA[] = [
             {
                 title: 'По корпусным работам',
                 url: '/services/hull-work',
+                img: '',
                 items: [
                     {
                         title: 'Сварочные работы',

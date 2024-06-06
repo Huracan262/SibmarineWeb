@@ -8,12 +8,13 @@ import Main from './views/Main';
 import Info from './views/info';
 import Similar from './views/Similar';
 
-import catalogItems from '../../data/catalog/itemTest';
-import {ICatalogItem} from '../../data/catalog/data';
+// import catalogItems from '../../data/catalog/itemTest';
+// import {ICatalogItem} from '../../data/catalog/data';
 
 import './ItemPage.scss';
+import item from '../../mocks/item/item';
 
-const ItemPage = (item: ICatalogItem) => {
+const ItemPage = () => {
     const bem = useBem('ItemPage');
 
     return (

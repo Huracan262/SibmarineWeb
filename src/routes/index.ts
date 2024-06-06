@@ -1,11 +1,13 @@
 import {IRouteItem} from '@steroidsjs/core/ui/nav/Router/Router';
 
 import RouteId from 'enums/RouteId';
+import DATA from 'data/DATA';
 
 import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
 import ItemPage from './ItemPage';
 import ContactsPage from './ContactsPage';
+import CategoryPage from './CategoryPage';
 
 const roles = [null];
 
@@ -38,6 +40,22 @@ export default {
             exact: true,
             path: '/contacts',
             component: ContactsPage,
+            roles,
+        },
+        [RouteId.CATALOG]: {
+            id: RouteId.CATALOG,
+            label: 'Каталог',
+            exact: true,
+            path: '/catalog',
+            component: () => CategoryPage(DATA[0]),
+            roles,
+        },
+        [RouteId.SERVICES]: {
+            id: RouteId.SERVICES,
+            label: 'Услуги',
+            exact: true,
+            path: '/services',
+            component: () => CategoryPage(DATA[1]),
             roles,
         },
     },
