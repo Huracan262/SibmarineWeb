@@ -25,7 +25,10 @@ const Menu: React.FC<IMenu> = ({className, menu, menuParent = false, menuChildre
                     className={`${bem.element('item')} ${isCurrent(menuParent, subMenu) ? 'current' : ''}`}
                     key={index}
                 >
-                    <Link className={bem.element('link')}>
+                    <Link
+                        className={bem.element('link')}
+                        toRoute={subMenu.url}
+                    >
                         <span
                             onMouseEnter={() => showMenu(subMenu)}
                             className={bem.element('text')}

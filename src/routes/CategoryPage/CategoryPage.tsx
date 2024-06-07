@@ -34,7 +34,7 @@ const CategoryPage = (category: any) => {
                             >
                                 <Link
                                     className={bem.element('link')}
-                                    to={item.url}
+                                    toRoute={item.url}
                                 >
                                     <h2 className={bem.element('item-title')}>
                                         {item.title}

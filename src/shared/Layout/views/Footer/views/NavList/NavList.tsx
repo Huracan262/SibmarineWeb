@@ -3,11 +3,11 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './NavList.scss';
+import {Link} from '@steroidsjs/core/ui/nav';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface INavList {
     item: any,
-    key?: number,
 }
 
 const NavList: React.FC<INavList> = ({item}) => {
@@ -15,7 +15,11 @@ const NavList: React.FC<INavList> = ({item}) => {
 
     return (
         <div className={bem.block()}>
-            <h3 className={bem.element('nav-title')}>{item.title}</h3>
+            <h3 className={bem.element('nav-title')}>
+                <Link toRoute={item.url}>
+                    {item.title}
+                </Link>
+            </h3>
 
             <ul className={bem.element('list')}>
 
@@ -26,7 +30,12 @@ const NavList: React.FC<INavList> = ({item}) => {
                             className={bem.element('item')}
                             key={index}
                         >
-                            <a className={bem.element('link')}>{el.title}</a>
+                            <Link
+                                className={bem.element('link')}
+                                toRoute={el.url}
+                            >
+                                {el.title}
+                            </Link>
                         </li>
                     ))}
             </ul>

@@ -1,0 +1,48 @@
+@use 'style/variables' as v;
+
+.ProductCard {
+  padding: 10px;
+
+  border-radius: 10px;
+  background-color: v.$color-border-lines;
+
+  overflow: hidden;
+
+  &__link > * > * {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 200;
+      color: v.$color-text-light;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &__table {
+    font-size: 10px;
+  }
+
+  &__price {
+
+  }
+
+  &__img {
+    position: relative;
+    top: -10px;
+    left: -10px;
+
+    order: -1;
+
+    width: 266px;
+    height: 150px;
+
+    background-color: tomato;
+  }
+}

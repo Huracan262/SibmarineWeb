@@ -19,12 +19,12 @@ const DATA: IDATA[] = [
         items: [
             {
                 title: 'Механизмы',
-                url: '/catalog/mechanisms',
+                url: RouteId.CATALOG_MECHANISMS,
                 img: '',
                 items: [
                     {
                         title: 'Стропа',
-                        url: '/catalog/mechanisms/stropa',
+                        url: RouteId.CATALOG_MECHANISMS_STROPS,
                         items: [
                             {
                                 title: 'Стропа-1',
@@ -42,7 +42,7 @@ const DATA: IDATA[] = [
                     },
                     {
                         title: 'Винт',
-                        url: '/catalog/mechanisms/screw',
+                        url: RouteId.CATALOG_MECHANISMS_VINTS,
                         items: [
                             {
                                 title: 'Винт-1',
@@ -60,7 +60,7 @@ const DATA: IDATA[] = [
                     },
                     {
                         title: 'Лодка',
-                        url: '/catalog/mechanisms/boat',
+                        url: RouteId.CATALOG_MECHANISMS_LODKI,
                         items: [
                             {
                                 title: 'Лодка-1',
@@ -80,12 +80,12 @@ const DATA: IDATA[] = [
             },
             {
                 title: 'Электрооборудование',
-                url: '/catalog/elektro',
+                url: RouteId.CATALOG_ELECTRICAL_EQUIPMENTS,
                 img: '',
                 items: [
                     {
                         title: 'Автоматический выключатель',
-                        url: '/catalog/elektro/avtomat',
+                        url: RouteId.CATALOG_ELECTRICAL_AVTOMATS,
                         items: [
                             {
                                 title: 'Автомат-1',
@@ -103,7 +103,7 @@ const DATA: IDATA[] = [
                     },
                     {
                         title: 'Контактор',
-                        url: '/catalog/elektro/contactor',
+                        url: RouteId.CATALOG_ELECTRICAL_CONTACTORS,
                         items: [
                             {
                                 title: 'Контактор-1',
@@ -121,7 +121,7 @@ const DATA: IDATA[] = [
                     },
                     {
                         title: 'Провод',
-                        url: '/catalog/elektro/wire',
+                        url: RouteId.CATALOG_ELECTRICAL_CABELS,
                         items: [
                             {
                                 title: 'Провод-1',
@@ -141,7 +141,7 @@ const DATA: IDATA[] = [
             },
             {
                 title: 'Радионавигационное оборудование',
-                url: '/catalog/radio',
+                url: RouteId.CATALOG_RADIO_EQUIPMENTS,
                 img: '',
                 items: [
                     {
@@ -399,7 +399,7 @@ const DATA: IDATA[] = [
         items: [
             {
                 title: 'О нас',
-                url: '/about/us',
+                url: RouteId.ABOUT,
             },
             {
                 title: 'Сертификаты и лицензии',
@@ -415,7 +415,7 @@ const DATA: IDATA[] = [
             },
             {
                 title: 'Контакты',
-                url: '/about/contacts',
+                url: RouteId.CONTACTS,
             },
         ],
     },

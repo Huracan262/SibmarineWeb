@@ -11,6 +11,7 @@ import Menu from './Menu';
 import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './NavMenu.scss';
+import {Link} from '@steroidsjs/core/ui/nav';
 
 interface INavMenu {
     item: any,
@@ -57,7 +58,11 @@ const NavMenu = ({item, theme}: INavMenu) => {
             onBlur={onMouseLeave}
             className={getWhiteModifier(bem.block(), Theme.light)}
         >
-            <h2 className={bem.element('title')}>{item.title}</h2>
+            <h2 className={bem.element('title')}>
+                <Link toRoute={item.url}>
+                    {item.title}
+                </Link>
+            </h2>
 
             <div className={bem.element('container')}>
                 <Menu

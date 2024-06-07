@@ -1,0 +1,7 @@
+@use 'style/variables' as v;
+
+.Filter {
+  fieldset {
+    background-color: v.$color-border-lines;
+  }
+}

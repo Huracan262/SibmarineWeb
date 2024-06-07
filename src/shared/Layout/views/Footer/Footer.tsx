@@ -27,7 +27,10 @@ const Footer: React.FC<IFooter> = ({...props}) => {
             <Wrapper>
                 <div className={bem.element('container')}>
                     <div className={bem.element('container2')}>
-                        <Logo size='200' color='white' />
+                        <Logo
+                            size='200'
+                            color='white'
+                        />
 
                         <Contacts className={bem.element('contacts')} />
 
@@ -52,7 +55,10 @@ const Footer: React.FC<IFooter> = ({...props}) => {
 
                     <div className={bem.element('nav-lists')}>
                         {DATA.map((item, index) => (
-                            <NavList item={item} key={index} />
+                            <NavList
+                                item={item}
+                                key={index}
+                            />
                         ))}
                     </div>
                 </div>
