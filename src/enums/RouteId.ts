@@ -4,20 +4,25 @@ enum RouteId {
     ITEM = 'item',
     CONTACTS = 'contacts',
     CATALOG = 'catalog',
+        CATALOG_MECHANISMS = 'mechanisms',
+            CATALOG_MECHANISMS_STROPS = 'strops',
+            CATALOG_MECHANISMS_VINTS = 'vints',
+            CATALOG_MECHANISMS_BOATS = 'boats',
+
+        CATALOG_ELECTRICAL = 'electrical',
+            CATALOG_ELECTRICAL_AVTOMATS = 'avtomats',
+            CATALOG_ELECTRICAL_CONTACTORS = 'contactors',
+            CATALOG_ELECTRICAL_CABELS = 'cabels',
+
+        CATALOG_RADIO = 'radios',
+            CATALOG_RADIO_LOCATORS = 'locators',
+            CATALOG_RADIO_RADIO_STATIONS = 'radio-stations',
+            CATALOG_RADIO_WALKIE_TALKIES = 'walkie-talkies',
+
     SERVICES = 'services',
-
-    // catalog-categories
-    CATALOG_MECHANISMS = 'mechanisms',
-        CATALOG_MECHANISMS_STROPS = 'strops',
-        CATALOG_MECHANISMS_VINTS = 'vints',
-        CATALOG_MECHANISMS_LODKI = 'lodki',
-
-    CATALOG_ELECTRICAL_EQUIPMENTS = 'electrical',
-        CATALOG_ELECTRICAL_AVTOMATS = 'avtomats',
-        CATALOG_ELECTRICAL_CONTACTORS = 'contactors',
-        CATALOG_ELECTRICAL_CABELS = 'cabels',
-
-    CATALOG_RADIO_EQUIPMENTS = 'radios',
+        SERVICES_HULL_WORKS = 'hull-works',
+        SERVICES_ELECTRICAL = 'electrical',
+        SERVICES_MAINTENANCE = 'maintenance',
 }
 
 export default RouteId;
