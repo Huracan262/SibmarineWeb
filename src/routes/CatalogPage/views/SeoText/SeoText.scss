@@ -1,0 +1,17 @@
+@use "style/variables" as v;
+
+.SeoText {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 200;
+  }
+}

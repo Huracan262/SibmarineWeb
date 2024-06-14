@@ -5,6 +5,19 @@
   //  outline: 1px solid slategray;
   //}
 
+  &__breadcrumbs * {
+    color: v.$color-text-light !important;
+  }
+
+  &__title {
+    margin: 15px 0 25px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
   &__container {
     display: flex;
     gap: 50px;
@@ -19,9 +32,11 @@
   }
 
   &__sort {
-    margin-bottom: 20px;
+    margin: 8px 0 20px;
+    padding: 5px;
 
-    background-color: v.$color-border-lines;
+    border-radius: 10px;
+    border: 1px solid v.$color-border-lines;
   }
 
   &__products-list {
@@ -29,5 +44,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+  }
+
+  &__pagination {
+    margin-bottom: 50px;
   }
 }
