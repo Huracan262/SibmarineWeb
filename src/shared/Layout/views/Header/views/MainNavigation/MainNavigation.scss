@@ -19,19 +19,18 @@
     align-items: center;
 
     font-size: 16px;
+    color: v.$color-text-light;
 
     border-radius: 10px 10px 0 0;
+    border: 3px solid transparent;
   }
 
   .current {
-    background-color: fade-out(v.$color-light-blue, 0.9);
-    backdrop-filter: blur(3px)
-  }
+    color: v.$color-tiffany-blue !important;
+    border-bottom: 3px solid v.$color-sky-blue;
 
-  .current-light {
-    background-color: fade-out(v.$color-dark-navy, 0.3);
-
-    .icon, span {
+    .icon, .text {
+      background-color: red;
       color: v.$color-text-light;
     }
   }
@@ -49,6 +48,6 @@
   }
 
   .light {
-    color: v.$color-text-dark;
+    color: v.$color-text-light;
   }
 }

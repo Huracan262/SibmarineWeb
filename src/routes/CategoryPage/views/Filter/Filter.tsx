@@ -4,7 +4,11 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 
 import './Filter.scss';
 
-const Filter = ({className = ''}) => {
+interface IFilter {
+    className?: string,
+}
+
+const Filter = ({className}: IFilter) => {
     const bem = useBem('Filter');
 
     return (
@@ -15,15 +19,16 @@ const Filter = ({className = ''}) => {
                 <label className={bem.element('label')}>
                     <input
                         className={bem.element('input')}
-                        type="checkbox" />
+                        type="checkbox"
+                    />
                     В наличии
                 </label>
-
 
                 <label className={bem.element('label')}>
                     <input
                         className={bem.element('input')}
-                        type="checkbox" />
+                        type="checkbox"
+                    />
                     Под заказ
                 </label>
             </fieldset>

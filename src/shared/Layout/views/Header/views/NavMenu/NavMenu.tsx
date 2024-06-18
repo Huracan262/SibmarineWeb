@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {Link} from '@steroidsjs/core/ui/nav';
 
 import Theme from 'enums/Theme';
 import getWhiteModifier from 'utils/getWhiteModifier';
@@ -11,7 +12,6 @@ import Menu from './Menu';
 import useMouseEvents from '../../hooks/useMouseEvents';
 
 import './NavMenu.scss';
-import {Link} from '@steroidsjs/core/ui/nav';
 
 interface INavMenu {
     item: any,
@@ -58,33 +58,25 @@ const NavMenu = ({item, theme}: INavMenu) => {
             onBlur={onMouseLeave}
             className={getWhiteModifier(bem.block(), Theme.light)}
         >
-            <h2 className={bem.element('title')}>
-                <Link toRoute={item.url}>
-                    {item.title}
-                </Link>
-            </h2>
+            <Menu
+                className={bem.element('list')}
+                menu={menuOne}
+                menuParent={menuTwo}
+                showMenu={showMenuTwo}
+            />
 
-            <div className={bem.element('container')}>
-                <Menu
-                    className={bem.element('list')}
-                    menu={menuOne}
-                    menuParent={menuTwo}
-                    showMenu={showMenuTwo}
-                />
+            <Menu
+                className={bem.element('list')}
+                menu={menuTwo}
+                menuParent={menuThree}
+                showMenu={showMenuThree}
+            />
 
-                <Menu
-                    className={bem.element('list')}
-                    menu={menuTwo}
-                    menuParent={menuThree}
-                    showMenu={showMenuThree}
-                />
-
-                <Menu
-                    className={bem.element('list')}
-                    menu={menuThree}
-                    menuChildren={menuTwo}
-                />
-            </div>
+            <Menu
+                className={bem.element('list')}
+                menu={menuThree}
+                menuChildren={menuTwo}
+            />
         </aside>
     );
 };

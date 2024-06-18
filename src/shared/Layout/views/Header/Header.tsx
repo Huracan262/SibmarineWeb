@@ -39,8 +39,8 @@ const Header = ({theme} : IHeader) => {
                 <Wrapper className={bem.element('wrapper')}>
                     <Logo
                         className={bem.element('logo')}
-                        size='150'
-                        color={theme === Theme.light ? '#333333' : '#ffffff'}
+                        size='100'
+                        color={theme === Theme.light ? '#162639' : '#ffffff'}
                     />
 
                     <div className={bem.element('container')}>

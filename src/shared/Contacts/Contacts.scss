@@ -10,7 +10,7 @@
     font-size: 14px;
     font-weight: inherit;
     font-style: inherit;
-    color: fade-out(v.$color-light-blue, 0.5);
+    color: fade-out(v.$color-text-light, 0.3);
 
     border: none;
     background-color: transparent;
@@ -20,12 +20,12 @@
     transition: color 200ms ease-out;
 
     &:hover {
-      color: v.$color-light-blue;
+      color: v.$color-border-lines;
       text-decoration: underline;
     }
   }
 
   .light {
-    color: v.$color-text-dark;
+    //color: v.$color-text-dark;
   }
 }

@@ -12,9 +12,11 @@ interface ILogo {
 
 // TODO - внедрить подгрузку цвета из переменной SCSS.
 const Logo: React.FC<ILogo> = ({className, size = '150', color = '#000'}: ILogo) => (
-    <Link toRoute={RouteId.HOME}>
+    <Link
+        className={`logo ${className}`}
+        toRoute={RouteId.HOME}
+    >
         <svg
-            className={className}
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
             width={`${size}px`}

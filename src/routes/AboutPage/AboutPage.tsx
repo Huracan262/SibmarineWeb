@@ -1,11 +1,9 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
-
-import useOpenModal from 'hooks/useOpenModal';
+import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 
 import './AboutPage.scss';
-import Wrapper from '../../shared/Wrapper';
 import Theme from 'enums/Theme';
 
 import Banner from './views/Banner';
@@ -15,15 +13,16 @@ import Directions from './views/Directions';
 import Statistics from './views/Statistics';
 import Team from './views/Team';
 import Application from './views/Application';
+import Wrapper from '../../shared/Wrapper';
 
 const AboutPage: React.FC = () => {
     const bem = useBem('AboutPage');
 
     return (
         <main className={bem.block()}>
-            {/*<div className={styles.wrapper}>*/}
-            {/*    <Breadcrumb/>*/}
-            {/*</div>*/}
+            <Wrapper>
+                <Breadcrumbs className={bem.element('breadcrumbs')} />
+            </Wrapper>
 
             <Banner className={bem.element('banner')} />
 

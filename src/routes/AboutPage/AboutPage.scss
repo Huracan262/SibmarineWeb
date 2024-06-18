@@ -1,5 +1,7 @@
 @use 'style/variables' as v;
 
 .AboutPage {
-
+  &__breadcrumbs * {
+    color: white !important;
+  }
 }

@@ -38,7 +38,7 @@ const MainNavigation = ({navMenuItem, theme}: IMainNavigation) => {
                                 ${bem.element('link')}
                                 ${item === navMenuItem ? 'current' : ''}
                                 ${item === navMenuItem && theme === Theme.light ? 'current-light' : ''}
-                                `}
+                            `}
                             toRoute={item.url}
                         >
                             {/* TODO - Переписать theme на функцию */}

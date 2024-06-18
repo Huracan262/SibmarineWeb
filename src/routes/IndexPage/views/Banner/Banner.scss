@@ -2,16 +2,12 @@
 
 .Banner {
   padding-top: 150px;
-  padding-bottom: 500px;
+  padding-bottom: 600px;
   position: relative;
-  top: -150px;
+  top: -220px;
   z-index: -1;
 
   overflow: hidden;
-
-  &__wrapper {
-    height: 100%;
-  }
 
   &::before {
     content: "";
@@ -20,6 +16,22 @@
     position: absolute;
     bottom: 0;
     background-image: linear-gradient(to bottom, transparent 0%, v.$color-dark-navy 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    box-shadow: inset 0 -20px 80px 50px fade-out(v.$color-dark-navy, 0.4);
+  }
+
+  &__wrapper {
+    height: 100%;
   }
 
   &__background-video {
@@ -40,7 +52,16 @@
     line-height: 50px;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: right;
     //color: fade-out(v.$color-text-dark, 0.3);
+    text-shadow:
+      -1px -1px 0 lightgrey,  // Верхний левый
+      1px -1px 0 lightgrey,   // Верхний правый
+      -1px 1px 0 lightgrey,   // Нижний левый
+      1px 1px 0 lightgrey;    // Нижний правый
+
+    opacity: 0.8;
+    mix-blend-mode: lighten;
   }
 
   &__title-additional {

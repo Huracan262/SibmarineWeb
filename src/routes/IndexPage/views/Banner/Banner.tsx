@@ -18,7 +18,7 @@ const Banner: React.FC<IBanner> = ({...props}) => {
         <section className={bem.block()}>
             <video
                 className={bem.element('background-video')}
-                src='videos/background.mp4'
+                src='videos/presentation.mp4'
                 loop
                 autoPlay
                 muted

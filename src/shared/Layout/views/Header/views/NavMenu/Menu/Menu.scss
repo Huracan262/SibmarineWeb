@@ -13,13 +13,13 @@
   &__text {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    font-weight: 200;
-    color: v.$color-light-blue;
+    font-weight: 400;
+    color: v.$color-text-dark;
 
     transition: color 200ms ease-out;
 
     &:hover {
-      color: v.$color-text-light;
+      color: v.$color-border-lines;
     }
 
     &:active {
@@ -28,14 +28,14 @@
   }
 
   .current {
-    background-color: fade-out(v.$color-light-blue, 0.8);
+    background-color: v.$color-sky-blue;
 
     transition:
       color 200ms ease-out,
       background-color 200ms ease-out;
 
     & * {
-      color: v.$color-text-light;
+      color: v.$color-dark-navy;
     }
   }
 }
