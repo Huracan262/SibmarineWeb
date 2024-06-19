@@ -1,16 +1,24 @@
-import RouteId from '../../../enums/RouteId';
-import walkieTalkies from './ walkie-talkies/walkie-talkies';
-import radioStations from './radio-stations/radio-stations';
-import locators from './locators/locators';
+import RouteId from 'enums/RouteId';
+import shipComms from './ship-comms/ship-comms';
+import portableVhf from './portable-vhf/portable-vhf';
+import stationaryVhf from './stationary-vhf/stationary-vhf';
+import hfMw from './hf-mw/hf-mw';
+import antennas from './antennas/antennas';
+import accessories from './accessories/accessories';
+import kvuParts from './kvu-parts/kvu-parts';
 
 const radio = {
-    title: 'Радионавигационное оборудование',
+    title: 'Радиосвязь и КВУ',
     url: RouteId.CATALOG_RADIO,
     img: '',
     items: [
-        locators,
-        radioStations,
-        walkieTalkies,
+        shipComms,
+        portableVhf,
+        stationaryVhf,
+        hfMw,
+        antennas,
+        accessories,
+        kvuParts,
     ],
 };
 
