@@ -22,29 +22,23 @@ const ProductCard = ({product}) => {
 
                 <table className={bem.element('table')}>
                     <tbody>
-                        <tr>
-                            <th>Какая-то характеристика</th>
-                            <td>Значение характеристики</td>
-                        </tr>
-
-                        <tr>
-                            <th>Какая-то характеристика</th>
-                            <td>Значение характеристики</td>
-                        </tr>
-
-                        <tr>
-                            <th>Какая-то характеристика</th>
-                            <td>Значение характеристики</td>
-                        </tr>
+                        {product.characteristics.slice(0, 3).map((characteristic, index) => (
+                            <tr key={index}>
+                                {/*<th>{characteristic}</th>*/}
+                                <td>{characteristic}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
 
-                <strong className={bem.element('price')}>22000</strong>
+                <strong className={bem.element('price')}>
+                    {product.price || 'По запросу'}
+                </strong>
 
                 <img
                     className={bem.element('img')}
-                    src=''
-                    alt=''
+                    src={product.images}
+                    alt={product.title}
                 />
             </Link>
         </li>

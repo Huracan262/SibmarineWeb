@@ -17,17 +17,19 @@ const Description: React.FC<IDescription> = ({item}) => {
                 {item.description}
             </p>
 
-            <div className={bem.element('container')}>
-                <img
-                    className={bem.element('rko-logo')}
-                    src='/images/itemPage/PKO-PPP.png'
-                    alt="РКО"
-                />
+            {item.RKOCertificate && (
+                <div className={bem.element('container')}>
+                    <img
+                        className={bem.element('rko-logo')}
+                        src='/images/itemPage/PKO-PPP.png'
+                        alt="РКО"
+                    />
 
-                <small className={bem.element('license')}>
-                    Оборудование имеет сертификат РКО
-                </small>
-            </div>
+                    <small className={bem.element('license')}>
+                        Оборудование имеет сертификат РКО
+                    </small>
+                </div>
+            )}
         </>
     );
 };

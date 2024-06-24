@@ -147,10 +147,17 @@ export default {
                             items: {
                                 [RouteId.ITEM_ERMAK360]: {
                                     id: RouteId.ITEM_ERMAK360,
-                                    label: DATA[0].items[2].items[0].title,
+                                    label: DATA[0].items[2].items[2].items[0].title,
                                     exact: true,
                                     path: '/' + RouteId.ITEM_ERMAK360,
                                     component: () => ItemPage(DATA[0].items[2].items[2].items[0]),
+                                },
+                                [RouteId.ITEM_NAVCOM_SRS310]: {
+                                    id: RouteId.ITEM_NAVCOM_SRS310,
+                                    label: DATA[0].items[2].items[2].items[1].title,
+                                    exact: true,
+                                    path: '/' + RouteId.ITEM_NAVCOM_SRS310,
+                                    component: () => ItemPage(DATA[0].items[2].items[2].items[1]),
                                 },
                             },
                         },

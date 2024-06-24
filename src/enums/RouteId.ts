@@ -19,6 +19,7 @@ enum RouteId {
             CATALOG_RADIO_PORTABLE_VHF = 'portable-vhf',
             CATALOG_RADIO_STATIONARY_VHF = 'stationary-vhf',
                 ITEM_ERMAK360 = 'ermak360',
+                ITEM_NAVCOM_SRS310 = 'navcom-srs310',
             CATALOG_RADIO_HF_MW = 'hf-mw',
             CATALOG_RADIO_ANTENNAS = 'antennas',
             CATALOG_RADIO_ACCESSORIES = 'accessories',

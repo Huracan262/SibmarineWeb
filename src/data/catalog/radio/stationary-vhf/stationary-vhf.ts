@@ -1,5 +1,6 @@
 import RouteId from 'enums/RouteId';
 import ermak360 from './ermak360/ermak360';
+import navcomSrs310 from './navcom-srs310/navcom-srs310';
 
 const stationaryVhf = {
     title: 'Стационарные УКВ радиостанции',
@@ -7,6 +8,7 @@ const stationaryVhf = {
     img: '',
     items: [
         ermak360,
+        navcomSrs310,
     ],
 };
 

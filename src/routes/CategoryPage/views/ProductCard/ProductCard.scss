@@ -1,14 +1,23 @@
 @use 'style/variables' as v;
 
 .ProductCard {
-  padding: 10px;
+  position: relative;
+
+  width: 250px;
 
   border-radius: 10px;
   background-color: v.$color-border-lines;
 
   overflow: hidden;
 
+  transition: transform 200ms ease-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
   &__link > * > * {
+    padding: 260px 10px 10px;
     display: flex;
     flex-direction: column;
 
@@ -34,14 +43,14 @@
   }
 
   &__img {
-    position: relative;
-    top: -10px;
-    left: -10px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     order: -1;
 
-    width: 278px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
 
     background-color: slategray;
   }
