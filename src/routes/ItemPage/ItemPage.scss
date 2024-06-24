@@ -2,4 +2,12 @@
 
 .ItemPage {
   padding: 50px 0;
+
+  &__breadcrumbs {
+    margin-bottom: 25px;
+
+    & * {
+      color: v.$color-text-light !important;
+    }
+  }
 }

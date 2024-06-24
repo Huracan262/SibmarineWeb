@@ -2,10 +2,11 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
-import Availability from 'enums/Availability';
+import Button from 'ui/Button';
 
 import './Main.scss';
-import Button from '../../../../ui/Button';
+import useOpenModal from '../../../../hooks/useOpenModal';
+import {APPLICATION_FORM_MODAL_ID} from '../../../../modals/ApplicationFormModal/ApplicationFormModal';
 
 interface IMain {
     item: any, // TODO - any
@@ -14,57 +15,73 @@ interface IMain {
 const Main = ({item}: IMain) => {
     const bem = useBem('Main');
 
+    const openModal = useOpenModal(APPLICATION_FORM_MODAL_ID);
+
     return (
         <section className={bem.block()}>
-            <h1 className='visually-hidden'>Рация Ермак 360</h1>
+            <h1 className='visually-hidden'>
+                {item.title}
+            </h1>
 
             <img
                 className={bem.element('slider')}
-                src={item.img[0].img}
-                alt={item.title}
+                src={item.images}
+                alt=''
             />
 
             <div className={bem.element('main')}>
                 <div className={bem.element('title-container')}>
-                    <strong className={bem.element('title')}>Рация Ермак 360</strong>
+                    <strong className={bem.element('title')}>
+                        {item.title}
+                    </strong>
 
-                    <small className={bem.element('product-code')}>
-                        Артикул: {}
-                        <span>131415</span>
-                    </small>
+                    {!!item.productCode && (
+                        <small className={bem.element('product-code')}>
+                            {'Артикул: '}
+                            {item.productCode}
+                        </small>
+                    )}
                 </div>
 
                 <img
                     className={bem.element('manufacturer-logo')}
-                    src={item.img[0].img}
-                    alt={item.title}
+                    src={item.manufacturer}
+                    alt={item.manufacturer.slice(21, item.manufacturer.length - 4)}
                 />
 
                 <div className={bem.element('addition-container')}>
-                    <span className={bem.element('price')}>
-                        1200
-                        <span>₽</span>
+                    <span className={bem.element('price-title')}>
+                        Цена:
                     </span>
 
-                    <Button>Приобрести</Button>
+                    <span className={bem.element('price')}>
+                        {item.price ?? 'По запросу'}
+                    </span>
+
+                    <Button onClick={openModal}>
+                        Приобрести
+                    </Button>
                 </div>
 
-                <small className={bem.element('availability')}>{Availability.Availability}</small>
+                <small className={bem.element('availability')}>
+                    {item.availability ? 'В наличии' : 'Под заказ'}
+                </small>
 
                 <div className={bem.element('short-lists')}>
                     <div className={bem.element('specifications')}>
-                        <h3 className={bem.element('specifications-title')}>Технические характеристики</h3>
+                        <h3 className={bem.element('specifications-title')}>
+                            Технические характеристики
+                        </h3>
 
                         <ul className={bem.element('specifications-list')}>
-                            <li className={bem.element('specifications-item')}>
-                                Пример
-                            </li>
-                            <li className={bem.element('specifications-item')}>
-                                Пример
-                            </li>
-                            <li className={bem.element('specifications-item')}>
-                                Пример
-                            </li>
+                            {item.characteristics.slice(0, 5).map((characteristic, index) => (
+                                <li
+                                    className={bem.element('specifications-item')}
+                                    key={index}
+                                >
+                                    {characteristic}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -72,15 +89,14 @@ const Main = ({item}: IMain) => {
                         <h3 className={bem.element('advantages-title')}>Преимущества</h3>
 
                         <ul className={bem.element('advantages-list')}>
-                            <li className={bem.element('advantages-item')}>
-                                Пример
-                            </li>
-                            <li className={bem.element('advantages-item')}>
-                                Пример
-                            </li>
-                            <li className={bem.element('advantages-item')}>
-                                Пример
-                            </li>
+                            {item.advantages.slice(0, 5).map((advantage, index) => (
+                                <li
+                                    className={bem.element('advantages-item')}
+                                    key={index}
+                                >
+                                    {advantage}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 

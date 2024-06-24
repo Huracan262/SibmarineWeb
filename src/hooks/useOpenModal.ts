@@ -24,8 +24,6 @@ const useOpenModal = (modalId: number) => {
     const onClick = useCallback(() => {
         const modal = modals.find(el => el.modalId === modalId);
 
-        console.log('modal', modal);
-
         if (modal) {
             const payload = {
                 title: modal.title,

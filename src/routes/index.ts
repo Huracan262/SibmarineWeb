@@ -27,14 +27,6 @@ export default {
             component: AboutPage,
             roles,
         },
-        // [RouteId.ITEM]: {
-        //     id: RouteId.ITEM,
-        //     label: 'Карточка товара',
-        //     exact: true,
-        //     path: '/item',
-        //     component: ItemPage,
-        //     roles,
-        // },
         [RouteId.CONTACTS]: {
             id: RouteId.CONTACTS,
             label: 'Контакты',
@@ -152,6 +144,15 @@ export default {
                             exact: true,
                             path: '/' + RouteId.CATALOG_RADIO_STATIONARY_VHF,
                             component: () => CatalogPage(DATA[0].items[2].items[2]),
+                            items: {
+                                [RouteId.ITEM_ERMAK360]: {
+                                    id: RouteId.ITEM_ERMAK360,
+                                    label: DATA[0].items[2].items[0].title,
+                                    exact: true,
+                                    path: '/' + RouteId.ITEM_ERMAK360,
+                                    component: () => ItemPage(DATA[0].items[2].items[2].items[0]),
+                                },
+                            },
                         },
                         [RouteId.CATALOG_RADIO_HF_MW]: {
                             id: RouteId.CATALOG_RADIO_HF_MW,

@@ -15,15 +15,9 @@ const Banner: React.FC<IBanner> = ({className}) => {
 
     return (
         <section className={bem.block()}>
-            {/*<Wrapper className={`${bem.element('wrapper')} ${className}`}>*/}
-                <video
-                    className={bem.element('presentation-video')}
-                    src='videos/presentation.mp4'
-                    poster='images/posters/poster.png'
-                    loop
-                    controls
-                />
-            {/*</Wrapper>*/}
+            <Wrapper>
+                <div></div>
+            </Wrapper>
         </section>
     );
 };

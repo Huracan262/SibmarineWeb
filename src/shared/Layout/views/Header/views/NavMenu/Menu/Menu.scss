@@ -3,6 +3,7 @@
 .Menu {
   &__item {
     padding: 5px;
+    border-bottom: 1px solid fade-out(v.$color-border-lines, 0.9);
   }
 
   &__link, &__link * {

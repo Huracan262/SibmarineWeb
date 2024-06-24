@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
-import {Link} from '@steroidsjs/core/ui/nav';
 
 import Theme from 'enums/Theme';
 import getWhiteModifier from 'utils/getWhiteModifier';

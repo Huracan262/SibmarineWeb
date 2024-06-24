@@ -14,7 +14,7 @@ const ProductCard = ({product}) => {
         >
             <Link
                 className={bem.element('link')}
-                toRoute=""
+                toRoute={product.url}
             >
                 <h2 className={bem.element('title')}>
                     {product.title}

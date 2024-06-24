@@ -1,25 +1,30 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 
 import Wrapper from 'shared/Wrapper';
 
 import Main from './views/Main';
-import Info from './views/info';
+import Info from './views/Info';
 import Similar from './views/Similar';
 
-// import catalogItems from '../../data/catalog/itemTest';
-// import {ICatalogItem} from '../../data/catalog/data';
-
 import './ItemPage.scss';
-import item from '../../mocks/item/item';
 
-const ItemPage = () => {
+interface IItemPage {
+    title: string,
+}
+
+const ItemPage = (item: IItemPage) => {
     const bem = useBem('ItemPage');
 
     return (
         <main className={bem.block()}>
             <Wrapper>
+                <Breadcrumbs
+                    className={bem.element('breadcrumbs')}
+                />
+
                 <Main item={item} />
 
                 <Info item={item} />
