@@ -1,13 +1,14 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import { BsEnvelopePlusFill } from "react-icons/bs";
 
 import './Application.scss';
-import Theme from '../../../../enums/Theme';
-import getWhiteModifier from '../../../../utils/getWhiteModifier';
-import Wrapper from '../../../../shared/Wrapper';
-import SOCIALS_LIST from '../../../../data/SOCIALS_LIST';
-import Button from '../../../../ui/Button';
+import Theme from 'enums/Theme';
+import getWhiteModifier from 'utils/getWhiteModifier';
+import Wrapper from 'shared/Wrapper';
+import SOCIALS_LIST from 'data/SOCIALS_LIST';
+import Button from 'ui/Button';
 
 interface IApplication {
     theme: Theme,
@@ -107,11 +108,12 @@ const Application = ({theme}: IApplication) => {
                     </form>
 
                     <p className={bem.element('picture')}>
-                        <img
-                            className={bem.element('img')}
-                            src=""
-                            alt=""
-                        />
+                        <BsEnvelopePlusFill />
+                        {/*<img*/}
+                        {/*    className={bem.element('img')}*/}
+                        {/*    src=""*/}
+                        {/*    alt=""*/}
+                        {/*/>*/}
                     </p>
                 </div>
             </Wrapper>

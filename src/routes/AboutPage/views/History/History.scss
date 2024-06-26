@@ -7,7 +7,7 @@
   }
 
   &__item {
-    height: 200px;
+    height: 300px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -20,11 +20,11 @@
     margin-bottom: 20px;
     position: relative;
 
-    font-size: 100px;
-    font-weight: 400;
+    font-size: 80px;
+    font-weight: 200;
     text-align: center;
 
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid v.$color-border-lines;
 
     &::before {
       content: "";
@@ -35,11 +35,13 @@
       right: -10px;
 
       border: 10px solid transparent;
-      border-left-color: black;
+      border-left-color: v.$color-border-lines;
     }
   }
 
   &__text {
-
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
   }
 }

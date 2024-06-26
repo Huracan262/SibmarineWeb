@@ -31,28 +31,36 @@ const History: React.FC<IHistory> = ({...props}) => {
                         style={{overflow: 'clip'}}
                     >
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2016</h3>
+                            <p className={bem.element('text')}>Дата основания компании</p>
                         </li>
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2020</h3>
+                            <p className={bem.element('text')}>Получения признания на: модернизацию, переоборудование, обновление и ремонт судов/плавучих объектов.</p>
                         </li>
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2020</h3>
+                            <p className={bem.element('text')}>Получения признания на: разработку технической документации на ремонт, модернизацию, переоборудование судов/плавучих объектов.</p>
                         </li>
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2023</h3>
+                            <p className={bem.element('text')}>Получения признания на: строительство несамоходных судов и плавучих объектов с классом Российского Классификационного Общества.</p>
                         </li>
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2024</h3>
+                            <p className={bem.element('text')}>Получения признания на: ремонт, монтаж, наладка систем АПС на судах с классом Российского Классификационного Общества.</p>
                         </li>
                         <li className={bem.element('item')}>
-                            <h3 className={bem.element('item-title')}>2012</h3>
-                            <p className={bem.element('text')}>Тут текст информации по дате</p>
+                            <h3 className={bem.element('item-title')}>2024</h3>
+                            <p className={bem.element('text')}>Получения признания на: изготовление, ремонт, монтаж судового оборудования и систем по согласованной документации Российского Классификационного Общества</p>
+                        </li>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2024</h3>
+                            <p className={bem.element('text')}>Получения признания на: модернизацию, переоборудование, обновление и ремонт судов/плавучих объектов.</p>
+                        </li>
+                        <li className={bem.element('item')}>
+                            <h3 className={bem.element('item-title')}>2024</h3>
+                            <p className={bem.element('text')}>Получения признания на: монтаж и наладка элементов судна на судах с классом Российского Классификационного Общества</p>
                         </li>
                     </Marquee>
                 </ol>

@@ -2,6 +2,6 @@
 
 .AboutPage {
   &__breadcrumbs * {
-    color: white !important;
+    color: v.$color-text-light !important;
   }
 }

@@ -7,7 +7,7 @@
   &__wrapper {
     padding: 50px;
 
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: v.$color-tiffany-blue;
   }
 
@@ -96,16 +96,24 @@
   &__picture {
     width: 600px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background-color: v.$color-light-blue;
+    & > * {
+      margin-top: -50px;
+      font-size: 250px;
+      color: v.$color-tiffany-blue;
+      filter: brightness(1.1);
+    }
   }
 
-  &__img {
-    width: inherit;
-    height: inherit;
-
-    background-color: v.$color-sky-blue;
-  }
+  //&__img {
+  //  width: inherit;
+  //  height: inherit;
+  //
+  //  background-color: v.$color-sky-blue;
+  //}
 }
 
 .Application--white {

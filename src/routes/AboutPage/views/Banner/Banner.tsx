@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 
@@ -16,7 +16,12 @@ const Banner: React.FC<IBanner> = ({className}) => {
     return (
         <section className={bem.block()}>
             <Wrapper>
-                <div></div>
+                <img
+                    className={bem.element('img')}
+                    src='/images/about/banner.png'
+                    alt='logo'
+                />
+                <h1 className={bem.element('title')}>Sibmarine</h1>
             </Wrapper>
         </section>
     );

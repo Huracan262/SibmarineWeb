@@ -21,9 +21,13 @@
   }
 
   &__item-title {
+    margin-top: 10px;
+    text-align: center;
   }
 
   &__text {
+    text-align: center;
+    margin-top: 10px;
   }
 
   &__img {
@@ -31,6 +35,7 @@
 
     height: auto;
 
+    border-radius: 15px;
     background-color: v.$color-border-lines;
   }
 }

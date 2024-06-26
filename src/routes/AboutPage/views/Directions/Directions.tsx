@@ -24,26 +24,26 @@ const Directions: React.FC<IDirections> = ({...props}) => {
                     <p className={bem.element('picture')}>
                         <img
                             className={bem.element('img')}
-                            src=""
+                            src='/images/about/directions.jpg'
                             alt=""
                         />
                     </p>
 
                     <ul className={bem.element('list')}>
                         <li className={bem.element('item')}>
-                            Сфера №1
+                            • Поставки оборудования •
                         </li>
                         <li className={bem.element('item')}>
-                            Сфера №2
+                            • Оказание сервисных услуг •
                         </li>
                         <li className={bem.element('item')}>
-                            Сфера №3
+                            • Выполнение ежегодных актов •
                         </li>
                         <li className={bem.element('item')}>
-                            Сфера №4
+                            • Строительство судов •
                         </li>
                         <li className={bem.element('item')}>
-                            Сфера №5
+                            • Обучение персонала •
                         </li>
                     </ul>
                 </div>

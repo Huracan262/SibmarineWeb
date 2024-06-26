@@ -25,14 +25,14 @@ const Statistics = ({theme}: IStatistics) => {
                         диверсифицировать портфель продуктов и услуг и укрепить позиции на рынке</p>
 
                     <strong className={bem.element('additional')}>
-                        +98%<sup>/год</sup>
+                        +98%<sup>год</sup>
                     </strong>
                 </div>
 
                 <p className={bem.element('picture')}>
                     <img
                         className={bem.element('img')}
-                        src=""
+                        src='/images/about/arrow.png'
                         alt=""
                     />
                 </p>
