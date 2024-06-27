@@ -34,7 +34,7 @@ const CatalogPage = (category) => {
 
                         <ul className={bem.element('products-list')}>
                             {category.items.slice(0, 9)
-                                .map((productCard, index, list) => (
+                                .map((productCard, index) => (
                                     <ProductCard
                                         product={productCard}
                                         key={index}

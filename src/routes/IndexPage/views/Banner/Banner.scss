@@ -14,7 +14,8 @@
     width: 100%;
     height: 300px;
     position: absolute;
-    bottom: 81px; // TODO - Я Хз как это работает
+    bottom: 0;
+    //bottom: 81px; // TODO - Я Хз как это работает
     background-image: linear-gradient(to bottom, transparent 0%, v.$color-dark-navy 100%);
   }
 

@@ -9,6 +9,7 @@ import ItemPage from './ItemPage';
 import ContactsPage from './ContactsPage';
 import CategoryPage from './CategoryPage';
 import CatalogPage from './CatalogPage';
+import NewsPage from './NewsPage';
 
 const roles = [null];
 
@@ -25,6 +26,14 @@ export default {
             exact: true,
             path: '/about',
             component: AboutPage,
+            roles,
+        },
+        [RouteId.NEWS]: {
+            id: RouteId.NEWS,
+            label: 'Новости',
+            exact: true,
+            path: '/news',
+            component: NewsPage,
             roles,
         },
         [RouteId.CONTACTS]: {

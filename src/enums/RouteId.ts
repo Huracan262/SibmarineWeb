@@ -1,6 +1,7 @@
 enum RouteId {
     HOME = 'home',
     ABOUT = 'about',
+    NEWS = 'news',
     // ITEM = 'item',
     CONTACTS = 'contacts',
     CATALOG = 'catalog',
