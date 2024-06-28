@@ -1,5 +1,65 @@
 @use 'style/variables' as v;
 
 .NewsPage {
+  &__breadcrumbs * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: v.$color-text-light !important;
+  }
 
+  &__list {
+    padding-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+  }
+
+  &__item {
+    overflow: hidden;
+  }
+
+  &__link > * > * {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-title {
+    height: 55px;
+    padding: 0 10px 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: v.$color-text-light !important;
+  }
+
+  &__description {
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    height: 60px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: fade-out(v.$color-text-light, 0.5) !important;
+
+    overflow: hidden;
+  }
+
+  &__date {
+    padding: 0 10px 10px;
+    text-align: right;
+    color: v.$color-sky-blue !important;
+  }
+
+  &__item-img {
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    order: -1;
+  }
 }

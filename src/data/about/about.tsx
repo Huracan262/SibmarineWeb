@@ -22,7 +22,7 @@ const about = {
         },
         {
             title: 'Новости',
-            url: '/about/news',
+            url: RouteId.NEWS,
         },
         {
             title: 'Контакты',

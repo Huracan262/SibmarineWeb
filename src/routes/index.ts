@@ -10,6 +10,8 @@ import ContactsPage from './ContactsPage';
 import CategoryPage from './CategoryPage';
 import CatalogPage from './CatalogPage';
 import NewsPage from './NewsPage';
+import NEWS_LIST from '../data/NEWS_LIST';
+import NewsItemPage from './NewsItemPage/NewsItemPage';
 
 const roles = [null];
 
@@ -35,6 +37,24 @@ export default {
             path: '/news',
             component: NewsPage,
             roles,
+            items: {
+                [RouteId.NEWS_1]: {
+                    id: RouteId.NEWS_1,
+                    label: NEWS_LIST[0].title,
+                    exact: true,
+                    path: '/' + RouteId.NEWS_1,
+                    roles,
+                    component: () => NewsItemPage(NEWS_LIST[0]),
+                },
+                [RouteId.NEWS_2]: {
+                    id: RouteId.NEWS_2,
+                    label: NEWS_LIST[1].title,
+                    exact: true,
+                    path: '/' + RouteId.NEWS_2,
+                    roles,
+                    component: () => NewsItemPage(NEWS_LIST[1]),
+                },
+            },
         },
         [RouteId.CONTACTS]: {
             id: RouteId.CONTACTS,

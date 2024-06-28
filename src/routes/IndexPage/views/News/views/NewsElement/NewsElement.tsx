@@ -35,7 +35,7 @@ const NewsElement = ({element}: INewsElement) => {
 
             <img
                 className={bem.element('img')}
-                src={element.imgTitle}
+                src={element.img.length === 0 ? '/images/news/icon.jpg': element.img[0]}
                 alt={element.imgTitle}
             />
         </article>

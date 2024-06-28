@@ -2,13 +2,15 @@ import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
 import Pagination from '@steroidsjs/core/ui/list/Pagination/Pagination';
+import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 
-import './CatalogPage.scss';
-import {Breadcrumbs, Link} from '@steroidsjs/core/ui/nav';
-import Wrapper from '../../shared/Wrapper';
+import Wrapper from 'shared/Wrapper';
+import SeoText from './views/SeoText';
+
 import Filter from '../CategoryPage/views/Filter';
 import ProductCard from '../CategoryPage/views/ProductCard';
-import SeoText from './views/SeoText';
+
+import './CatalogPage.scss';
 
 const CatalogPage = (category) => {
     const bem = useBem('CatalogPage');

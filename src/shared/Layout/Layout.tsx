@@ -30,7 +30,7 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
     return (
         <div className={bem.block()}>
-            <Header theme={routeId === RouteId.HOME || routeId === RouteId.ABOUT ? Theme.light : Theme.dark} />
+            <Header theme={routeId === RouteId.HOME ? Theme.light : Theme.dark} />
 
             <div className={bem.element('content')}>
                 <Notifications />
