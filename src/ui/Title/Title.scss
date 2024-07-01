@@ -6,6 +6,8 @@
 
   border-radius: 0;
 
+  pointer-events: none;
+
   &__title {
     width: v.$width-desktop;
     margin-top: 50px;
@@ -47,5 +49,9 @@
     color: v.$color-tiffany-blue;
     opacity: 1;
     transform: translateX(0) scale(1);
+  }
+
+  &--link {
+    pointer-events: auto;
   }
 }

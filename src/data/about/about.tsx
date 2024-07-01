@@ -14,7 +14,7 @@ const about = {
         },
         {
             title: 'Сертификаты и лицензии',
-            url: '/about/certificates',
+            url: RouteId.CERTIFICATES,
         },
         {
             title: 'Наши работы',

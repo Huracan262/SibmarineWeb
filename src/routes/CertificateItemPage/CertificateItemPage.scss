@@ -1,0 +1,60 @@
+@use "style/variables" as v;
+
+.CertificateItemPage {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__breadcrumbs * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: v.$color-text-light !important;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: -50px;
+  }
+
+  &__category{
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 500px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    padding: 10px 20px;
+
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: v.$color-text-dark;
+
+    border-radius: 20px;
+    background-color: v.$color-sky-blue;
+
+    transition: background-color 50ms ease-out;
+
+    &:hover {
+      background-color: v.$color-tiffany-blue;
+    }
+
+    &:active {
+      background-color: v.$color-tiffany-blue;
+    }
+  }
+}

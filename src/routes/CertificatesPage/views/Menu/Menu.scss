@@ -1,0 +1,55 @@
+@use "style/variables" as v;
+
+.Certificates-Menu {
+  &__list {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+  }
+
+  &__label {
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    color: v.$color-text-light;
+
+    border-radius: 10px;
+    background-color: v.$color-border-lines;
+
+    outline: hidden;
+    cursor: pointer;
+
+    transition:
+      color 50ms ease-out,
+      transform 50ms ease-out,
+      background-color 50ms ease-out;
+
+    &:hover {
+      color: v.$color-text-dark;
+      transform: scale(1.01);
+      background-color: v.$color-light-blue;
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__title {
+    margin-left: 10px;
+  }
+
+  &__checkbox {
+
+  }
+
+  &__number {
+    margin-left: auto;
+  }
+}

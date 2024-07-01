@@ -2,6 +2,8 @@ import {IRouteItem} from '@steroidsjs/core/ui/nav/Router/Router';
 
 import RouteId from 'enums/RouteId';
 import DATA from 'data/DATA';
+import certificates from 'data/certificates/certificates';
+import NEWS_LIST from 'data/NEWS_LIST';
 
 import IndexPage from './IndexPage';
 import AboutPage from './AboutPage';
@@ -10,8 +12,9 @@ import ContactsPage from './ContactsPage';
 import CategoryPage from './CategoryPage';
 import CatalogPage from './CatalogPage';
 import NewsPage from './NewsPage';
-import NEWS_LIST from '../data/NEWS_LIST';
 import NewsItemPage from './NewsItemPage/NewsItemPage';
+import CertificatesPage from './CertificatesPage';
+import CertificateItemPage from './CertificateItemPage';
 
 const roles = [null];
 
@@ -43,16 +46,34 @@ export default {
                     label: NEWS_LIST[0].title,
                     exact: true,
                     path: '/' + RouteId.NEWS_1,
-                    roles,
                     component: () => NewsItemPage(NEWS_LIST[0]),
+                    roles,
                 },
                 [RouteId.NEWS_2]: {
                     id: RouteId.NEWS_2,
                     label: NEWS_LIST[1].title,
                     exact: true,
                     path: '/' + RouteId.NEWS_2,
-                    roles,
                     component: () => NewsItemPage(NEWS_LIST[1]),
+                    roles,
+                },
+            },
+        },
+        [RouteId.CERTIFICATES]: {
+            id: RouteId.CERTIFICATES,
+            label: 'Сертификаты и лицензии',
+            exact: true,
+            path: '/' + RouteId.CERTIFICATES,
+            component: CertificatesPage,
+            roles,
+            items: {
+                [RouteId.CERTIFICATES_RKO]: {
+                    id: RouteId.CERTIFICATES_RKO,
+                    label: certificates[0].title,
+                    exact: true,
+                    path: '/' + RouteId.CERTIFICATES_RKO,
+                    component: () => CertificateItemPage(certificates[0]),
+                    roles,
                 },
             },
         },

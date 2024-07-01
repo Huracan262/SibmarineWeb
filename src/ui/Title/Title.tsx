@@ -6,23 +6,24 @@ import useBem from '@steroidsjs/core/hooks/useBem';
 import {Link} from '@steroidsjs/core/ui/nav';
 
 import RouteId from 'enums/RouteId';
-import getWhiteModifier from 'utils/getWhiteModifier';
 import Theme from 'enums/Theme';
+import getWhiteModifier from 'utils/getWhiteModifier';
 
 import './Title.scss';
 
 interface ITitle {
     children: string,
+    className?: string,
     link?: RouteId,
     theme?: Theme,
 }
 
-const Title: React.FC<ITitle> = ({children, link, theme = Theme.dark}) => {
+const Title: React.FC<ITitle> = ({children, className, link, theme = Theme.dark}) => {
     const bem = useBem('Title');
 
     return (
         <Link
-            className={bem.block()}
+            className={`${bem.block()} ${className} ${!!link ? bem.block() + '--link' : ''}`}
             toRoute={link}
         >
             <h2 className={getWhiteModifier(bem.element('title'), theme)}>

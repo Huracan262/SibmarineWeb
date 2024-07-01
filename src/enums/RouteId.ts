@@ -4,6 +4,8 @@ enum RouteId {
     NEWS = 'news',
         NEWS_1 = 'news-1',
         NEWS_2 = 'news-2',
+    CERTIFICATES = 'certificates',
+        CERTIFICATES_RKO = 'RKO',
     CONTACTS = 'contacts',
     CATALOG = 'catalog',
         CATALOG_ELECTRO = 'electro',
