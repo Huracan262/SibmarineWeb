@@ -18,7 +18,7 @@ const about = {
         },
         {
             title: 'Наши работы',
-            url: '/about/our-work',
+            url: RouteId.PORTFOLIO,
         },
         {
             title: 'Новости',

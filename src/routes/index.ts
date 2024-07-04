@@ -15,6 +15,9 @@ import NewsPage from './NewsPage';
 import NewsItemPage from './NewsItemPage/NewsItemPage';
 import CertificatesPage from './CertificatesPage';
 import CertificateItemPage from './CertificateItemPage';
+import PortfolioPage from './PortfolioPage';
+import portfolio from '../data/portfolio/portfolio';
+import PortfolioItemPage from './PortfolioItemPage';
 
 const roles = [null];
 
@@ -73,6 +76,32 @@ export default {
                     exact: true,
                     path: '/' + RouteId.CERTIFICATES_RKO,
                     component: () => CertificateItemPage(certificates[0]),
+                    roles,
+                },
+            },
+        },
+        [RouteId.PORTFOLIO]: {
+            id: RouteId.PORTFOLIO,
+            label: 'Наши работы',
+            exact: true,
+            path: '/portfolio',
+            component: PortfolioPage,
+            roles,
+            items: {
+                [RouteId.PORTFOLIO_1]: {
+                    id: RouteId.PORTFOLIO_1,
+                    label: portfolio[0].title,
+                    exact: true,
+                    path: '/' + RouteId.PORTFOLIO_1,
+                    component: () => PortfolioItemPage(portfolio[0]),
+                    roles,
+                },
+                [RouteId.PORTFOLIO_2]: {
+                    id: RouteId.PORTFOLIO_2,
+                    label: portfolio[1].title,
+                    exact: true,
+                    path: '/' + RouteId.PORTFOLIO_2,
+                    component: () => PortfolioItemPage(portfolio[1]),
                     roles,
                 },
             },
