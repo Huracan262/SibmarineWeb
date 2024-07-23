@@ -7,6 +7,7 @@ import Title from 'ui/Title';
 import Wrapper from 'shared/Wrapper';
 
 import './PortfolioItemPage.scss';
+import Theme from '../../enums/Theme';
 
 interface IPortfolioItemPage {
     title: string,
@@ -23,13 +24,17 @@ const PortfolioItemPage: React.FC<IPortfolioItemPage> = (item) => {
             <Wrapper>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
-                <Title className={bem.element('main-title')}>
+                <Title
+                    className={bem.element('main-title')}
+                    theme={Theme.light}
+                >
                     {item.title}
                 </Title>
 
-                <small>
+                <small >
                     {item.date}
                 </small>
 

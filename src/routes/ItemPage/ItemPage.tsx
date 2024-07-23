@@ -23,6 +23,7 @@ const ItemPage = (item: IItemPage) => {
             <Wrapper>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
                 <Main item={item} />

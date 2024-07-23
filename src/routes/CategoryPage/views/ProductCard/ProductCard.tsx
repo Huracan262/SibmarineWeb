@@ -1,9 +1,9 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {Link} from '@steroidsjs/core/ui/nav';
 
 import './ProductCard.scss';
-import {Link} from '@steroidsjs/core/ui/nav';
 
 const ProductCard = ({product}) => {
     const bem = useBem('ProductCard');

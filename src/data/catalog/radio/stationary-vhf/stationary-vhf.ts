@@ -5,7 +5,7 @@ import navcomSrs310 from './navcom-srs310/navcom-srs310';
 const stationaryVhf = {
     title: 'Стационарные УКВ радиостанции',
     url: RouteId.CATALOG_RADIO_STATIONARY_VHF,
-    img: '',
+    img: '/images/CategoryPage/stationary.jpg',
     items: [
         ermak360,
         navcomSrs310,

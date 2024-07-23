@@ -10,7 +10,7 @@ import testers from './testers/testers';
 const gmdss = {
     title: 'Судовое оборудование ГМССБ',
     url: RouteId.CATALOG_GMDSS,
-    img: '',
+    img: '/images/CategoryPage/gmdss.jpg',
     items: [
         epirbs,
         sarts,

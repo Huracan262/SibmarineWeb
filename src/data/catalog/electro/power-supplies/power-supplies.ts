@@ -3,7 +3,7 @@ import RouteId from 'enums/RouteId';
 const powerSupplies = {
     title: 'Блоки питания',
     url: RouteId.CATALOG_ELECTRO_POWER_SUPPLIES,
-    img: '',
+    img: '/images/categoryPage/power-supplies.jpg',
     items: [],
 };
 

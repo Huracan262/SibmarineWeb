@@ -3,7 +3,7 @@ import RouteId from 'enums/RouteId';
 const transformers = {
     title: 'Трансформаторы',
     url: RouteId.CATALOG_ELECTRO_TRANSFORMERS,
-    img: '',
+    img: '/images/categoryPage/transformers.jpg',
     items: [],
 };
 

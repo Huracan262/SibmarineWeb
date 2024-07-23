@@ -1,11 +1,12 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {FaDownload} from 'react-icons/fa';
+
+import Wrapper from '../../shared/Wrapper';
+import SOCIALS_LIST from '../../data/SOCIALS_LIST';
 
 import './ContactsPage.scss';
-import Wrapper from '../../shared/Wrapper';
-import {FaDownload} from 'react-icons/fa';
-import SOCIALS_LIST from '../../data/SOCIALS_LIST';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IContactsPage {
@@ -32,13 +33,23 @@ const ContactsPage: React.FC<IContactsPage> = ({...props}) => {
                             <tr className={bem.element('tr')}>
                                 <th className={bem.element('th')}>Телефон</th>
                                 <td className={bem.element('td')}>
-                                    <a className={bem.element('link')} href="tel:+739123447073">+7 (391) 234-70-73</a>
+                                    <a
+                                        className={bem.element('link')}
+                                        href="tel:+739123447073"
+                                    >
+                                        +7 (391) 234-70-73
+                                    </a>
                                 </td>
                             </tr>
                             <tr className={bem.element('tr')}>
                                 <th className={bem.element('th')}>E-mail</th>
                                 <td className={bem.element('td')}>
-                                    <a className={bem.element('link')} href="mailto:smtrade@mssc.su">smtrade@mssc.su</a>
+                                    <a
+                                        className={bem.element('link')}
+                                        href="mailto:smtrade@mssc.su"
+                                    >
+                                        smtrade@mssc.su
+                                    </a>
                                 </td>
                             </tr>
                             <tr className={bem.element('tr')}>
@@ -70,7 +81,7 @@ const ContactsPage: React.FC<IContactsPage> = ({...props}) => {
 
                     <div className={bem.element('buttonDownload')}> {/* Временно (div) */}
                         <div className={bem.element('download')}>
-                            <FaDownload className={bem.element('icon')}/>
+                            <FaDownload className={bem.element('icon')} />
 
                             Скачать реквизиты
                         </div>

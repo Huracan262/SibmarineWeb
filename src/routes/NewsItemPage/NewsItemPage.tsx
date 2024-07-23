@@ -8,6 +8,8 @@ import Wrapper from 'shared/Wrapper';
 
 import './NewsItemPage.scss';
 import formatDate from '../../utils/formatDate';
+import Title from '../../ui/Title';
+import Theme from '../../enums/Theme';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface INewsItemPage {
@@ -26,12 +28,16 @@ const NewsItemPage: React.FC<INewsItemPage> = (item) => {
             <Wrapper>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
                 <section className={bem.element('item-block')}>
-                    <h1 className={bem.element('title')}>
+                    <Title
+                        className={bem.element('title')}
+                        theme={Theme.light}
+                    >
                         {item.title}
-                    </h1>
+                    </Title>
 
                     <span className={bem.element('date')}>
                         {formatDate(item.date)}

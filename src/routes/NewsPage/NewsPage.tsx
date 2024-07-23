@@ -7,6 +7,8 @@ import Wrapper from '../../shared/Wrapper';
 import {Breadcrumbs, Link} from '@steroidsjs/core/ui/nav';
 import NEWS_LIST from '../../data/NEWS_LIST';
 import formatDate from '../../utils/formatDate';
+import Title from '../../ui/Title';
+import Theme from '../../enums/Theme';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface INewsPage {
@@ -19,13 +21,17 @@ const NewsPage: React.FC<INewsPage> = () => {
     return (
         <main className={bem.block()}>
             <Wrapper>
-                <h1 className='visually-hidden'>
-                    Новости
-                </h1>
-
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
+
+                <Title
+                    className={bem.element('title')}
+                    theme={Theme.light}
+                >
+                    Новости
+                </Title>
 
                 <ul className={bem.element('list')}>
                     {NEWS_LIST.map((item, index: number) => (

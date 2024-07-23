@@ -3,7 +3,7 @@ import RouteId from 'enums/RouteId';
 const hfMw = {
     title: 'ПВ/КВ радиостанции',
     url: RouteId.CATALOG_RADIO_HF_MW,
-    img: '',
+    img: '/images/CategoryPage/hfMw.jpg',
     items: [],
 };
 

@@ -6,7 +6,7 @@ import radars from './radars/radars';
 const nav = {
     title: 'Навигационное оборудование',
     url: RouteId.CATALOG_NAV,
-    img: '',
+    img: 'images/categoryPage/navigation.jpg',
     items: [
         compasses,
         sonars,

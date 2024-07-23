@@ -7,7 +7,7 @@ import rescue from './rescue/Rescue';
 const safety = {
     title: 'Системы безопасности',
     url: RouteId.CATALOG_SAFETY,
-    img: '',
+    img: '/images/categoryPage/safety.jpg',
     items: [
         fireSystems,
         cctv,

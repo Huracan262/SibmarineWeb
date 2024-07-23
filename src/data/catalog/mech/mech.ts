@@ -10,7 +10,7 @@ import mooring from './mooring/mooring';
 const mech = {
     title: 'Механизмы и оборудование',
     url: RouteId.CATALOG_MECH,
-    img: '',
+    img: '/images/CategoryPage/mech.jpg',
     items: [
         nozzles,
         propellers,

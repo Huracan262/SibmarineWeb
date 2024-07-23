@@ -10,7 +10,7 @@ import switches from './switches/switches';
 const lighting = {
     title: 'Светотехническое оборудование',
     url: RouteId.CATALOG_LIGHTING,
-    img: '',
+    img: '/images/CategoryPage/lighting.jpg',
     items: [
         buoys,
         explosionProof,

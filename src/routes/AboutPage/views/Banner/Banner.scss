@@ -4,8 +4,11 @@
 .BannerAbout {
   position: relative;
 
-  background-color: v.$color-dark-navy;
-  //@include blockShadows(top);
+  padding-bottom: 50px;
+
+  background-color: v.$color-light-background;
+
+  @include blockShadows(bot);
 
   &__title {
     position: relative;
@@ -18,7 +21,7 @@
     text-transform: uppercase;
     text-align: center;
     vertical-align: center;
-    color: fade-out(v.$color-text-light, 0.7);
+    color: fade-out(v.$color-text-dark, 0.7);
 
     border-radius: 10px;
   }

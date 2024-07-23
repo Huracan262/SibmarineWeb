@@ -10,7 +10,7 @@ import kvuParts from './kvu-parts/kvu-parts';
 const radio = {
     title: 'Радиосвязь и КВУ',
     url: RouteId.CATALOG_RADIO,
-    img: '',
+    img: '/images/CategoryPage/radio.jpg',
     items: [
         shipComms,
         portableVhf,

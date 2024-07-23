@@ -9,6 +9,7 @@ import portfolio from 'data/portfolio/portfolio';
 
 import './PortfolioPage.scss';
 import formatDate from '../../utils/formatDate';
+import Theme from '../../enums/Theme';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IPortfolioPage {
@@ -23,9 +24,13 @@ const PortfolioPage: React.FC<IPortfolioPage> = ({...props}) => {
             <Wrapper>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
-                <Title className={bem.element('main-title')}>
+                <Title
+                    className={bem.element('main-title')}
+                    theme={Theme.light}
+                >
                     Наши работы
                 </Title>
 

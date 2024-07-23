@@ -9,6 +9,7 @@ import Menu from './views/Menu';
 import './CertificatesPage.scss';
 import Documentation from './views/Documentation';
 import Title from '../../ui/Title';
+import Theme from '../../enums/Theme';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ICertificatesPage {
@@ -25,9 +26,13 @@ const CertificatesPage: React.FC<ICertificatesPage> = ({...props}) => {
             <Wrapper className={bem.element('wrapper')}>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
-                <Title className={bem.element('title')}>
+                <Title
+                    className={bem.element('title')}
+                    theme={Theme.light}
+                >
                     Сертификаты и лицензии
                 </Title>
 

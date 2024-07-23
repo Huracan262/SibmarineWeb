@@ -1,12 +1,17 @@
 @use "style/variables" as v;
+@import "style/mixins";
 
 .CatalogPage {
-  //& * {
-  //  outline: 1px solid slategray;
-  //}
+  padding: 25px 0 50px;
+
+  background-color: white;
+
+  color: v.$color-text-dark;
+
+  @include blockShadows();
 
   &__breadcrumbs * {
-    color: v.$color-text-light !important;
+    color: v.$color-text-dark !important;
   }
 
   &__title {
@@ -35,8 +40,28 @@
     margin: 8px 0 20px;
     padding: 5px;
 
+    display: flex;
+    justify-content: flex-end;
+
     border-radius: 10px;
     border: 1px solid v.$color-border-lines;
+  }
+
+  &__button {
+    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+
+    border: 8px solid transparent;
+    background-color: transparent;
+  }
+
+  &__button-top {
+    border-top-color: black;
+  }
+
+  &__button-bottom {
+    border-bottom-color: black;
   }
 
   &__products-list {

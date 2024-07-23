@@ -3,7 +3,6 @@ import React from 'react';
 import useBem from '@steroidsjs/core/hooks/useBem';
 import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 
-import './AboutPage.scss';
 import Theme from 'enums/Theme';
 
 import Banner from './views/Banner';
@@ -13,16 +12,24 @@ import Directions from './views/Directions';
 import Statistics from './views/Statistics';
 import Team from './views/Team';
 import Application from './views/Application';
+
 import Wrapper from '../../shared/Wrapper';
+
+import './AboutPage.scss';
 
 const AboutPage: React.FC = () => {
     const bem = useBem('AboutPage');
 
     return (
         <main className={bem.block()}>
-            <Wrapper>
-                <Breadcrumbs className={bem.element('breadcrumbs')} />
-            </Wrapper>
+            <div className={bem.element('container')}>
+                <Wrapper className={bem.element('wrapper')}>
+                    <Breadcrumbs
+                        className={bem.element('breadcrumbs')}
+                        showIcon
+                    />
+                </Wrapper>
+            </div>
 
             <Banner className={bem.element('banner')} />
 

@@ -1,10 +1,11 @@
 import React from 'react';
 
 import useBem from '@steroidsjs/core/hooks/useBem';
+import {Breadcrumbs, Link} from '@steroidsjs/core/ui/nav';
+
+import Wrapper from 'shared/Wrapper';
 
 import './CategoryPage.scss';
-import Wrapper from '../../shared/Wrapper';
-import {Breadcrumbs, Link} from '@steroidsjs/core/ui/nav';
 
 interface ICategoryPage {
     category: any, // TODO - any
@@ -22,6 +23,7 @@ const CategoryPage = (category: any) => {
 
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
                 <ul className={bem.element('list')}>

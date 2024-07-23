@@ -1,10 +1,15 @@
 @use 'style/variables' as v;
+@import 'style/mixins';
 
 .NewsPage {
-  &__breadcrumbs * {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: v.$color-text-light !important;
+  padding-top: 25px;
+  background-color: v.$color-light-background;
+  @include blockShadows();
+
+  &__breadcrumbs {
+    * {
+      color: v.$color-text-dark !important;
+    }
   }
 
   &__list {
@@ -17,6 +22,16 @@
 
   &__item {
     overflow: hidden;
+
+    transition: transform 50ms ease-out;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
   }
 
   &__link > * > * {
@@ -30,9 +45,9 @@
 
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
-    color: v.$color-text-light !important;
+    color: v.$color-text-dark !important;
   }
 
   &__description {
@@ -43,8 +58,8 @@
 
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 300;
-    color: fade-out(v.$color-text-light, 0.5) !important;
+    font-weight: 400;
+    color: fade-out(v.$color-text-dark, 0.5) !important;
 
     overflow: hidden;
   }

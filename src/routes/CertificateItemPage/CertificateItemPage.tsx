@@ -6,8 +6,10 @@ import {Breadcrumbs} from '@steroidsjs/core/ui/nav';
 import Wrapper from 'shared/Wrapper';
 import formatDate from 'utils/formatDate';
 
-import './CertificateItemPage.scss';
 import Title from '../../ui/Title';
+import Theme from '../../enums/Theme';
+
+import './CertificateItemPage.scss';
 
 const CertificateItemPage = (cert: any) => {
     const bem = useBem('CertificateItemPage');
@@ -17,10 +19,14 @@ const CertificateItemPage = (cert: any) => {
             <Wrapper className={bem.element('wrapper')}>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
                 <section className={bem.element('container')}>
-                    <Title className={bem.element('title')}>
+                    <Title
+                        className={bem.element('title')}
+                        theme={Theme.light}
+                    >
                         {cert.title}
                     </Title>
 

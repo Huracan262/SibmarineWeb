@@ -20,6 +20,7 @@ const CatalogPage = (category) => {
             <Wrapper>
                 <Breadcrumbs
                     className={bem.element('breadcrumbs')}
+                    showIcon
                 />
 
                 <h1 className={bem.element('title')}>
@@ -31,7 +32,8 @@ const CatalogPage = (category) => {
 
                     <div className={bem.element('products-container')}>
                         <div className={bem.element('sort')}>
-                            filters block
+                            <button className={`${bem.element('button')} ${bem.element('button-top')}`}></button>
+                            <button className={`${bem.element('button')} ${bem.element('button-bottom')}`}></button>
                         </div>
 
                         <ul className={bem.element('products-list')}>

@@ -8,7 +8,7 @@ import transformers from './transformers/transformers';
 const electro = {
     title: 'Электрооборудование и материалы',
     url: RouteId.CATALOG_ELECTRO,
-    img: '',
+    img: '/images/categoryPage/elektro.jpg',
     items: [
         pannels,
         cables,

@@ -1,7 +1,16 @@
 @use 'style/variables' as v;
+@import 'style/mixins';
 
 .AboutPage {
-  &__breadcrumbs * {
-    color: v.$color-text-light !important;
+  &__container {
+    padding-top: 25px;
+    background-color: v.$color-light-background;
+    @include blockShadows(top);
+  }
+
+  &__breadcrumbs {
+    * {
+      color: v.$color-text-dark !important;
+    }
   }
 }

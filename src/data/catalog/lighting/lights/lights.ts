@@ -3,7 +3,7 @@ import RouteId from 'enums/RouteId';
 const lights = {
     title: 'Сигнально-отличительные фонари',
     url: RouteId.CATALOG_LIGHTING_LIGHTS,
-    img: '',
+    img: '/images/CategoryPage/lights.jpg',
     items: [],
 };
 
