@@ -37,9 +37,9 @@
   &__product-code {
     //font-family: "Geologica", sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 16px;
-    //color: v.$color-border-lines;
+    color: v.$color-border-lines;
   }
 
   &__manufacturer-logo {
@@ -48,10 +48,10 @@
     margin-bottom: 40px;
 
     border-radius: 10px;
+    border: 1px solid fade-out(v.$color-border-lines, 0.8);
   }
 
   &__price-title {
-
   }
 
   &__price {

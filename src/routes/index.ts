@@ -18,6 +18,8 @@ import CertificateItemPage from './CertificateItemPage';
 import PortfolioPage from './PortfolioPage';
 import portfolio from '../data/portfolio/portfolio';
 import PortfolioItemPage from './PortfolioItemPage';
+import {setData} from '@steroidsjs/core/actions/auth';
+import {validateForm} from '@emailjs/browser/es/utils/validateForm/validateForm';
 
 const roles = [null];
 

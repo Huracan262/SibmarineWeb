@@ -46,18 +46,19 @@ const CatalogPage = (category) => {
                                 ))}
                         </ul>
 
-                        <Pagination
-                            className={bem.element('pagination')}
-                            showEdgeSteps
-                            aroundCount={1}
-                            list={{
-                                total: 2,
-                                page: 1,
-                                pageSize: 1,
-                            }}
-                        />
+                        {/*<Pagination*/}
+                        {/*    className={bem.element('pagination')}*/}
+                        {/*    showEdgeSteps*/}
+                        {/*    aroundCount={1}*/}
+                        {/*    list={{*/}
+                        {/*        total: 2,*/}
+                        {/*        page: 1,*/}
+                        {/*        pageSize: 1,*/}
+                        {/*    }}*/}
+                        {/*/>*/}
 
                         <SeoText />
+
                     </div>
                 </div>
             </Wrapper>
