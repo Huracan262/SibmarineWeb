@@ -1,0 +1,26 @@
+@use "style/variables" as v;
+@import "style/mixins";
+
+.AtWork {
+  color: v.$color-text-dark;
+
+  background-color: #fff;
+  @include blockShadows();
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 100px 0 50px;
+  }
+  
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__img {
+  }
+}

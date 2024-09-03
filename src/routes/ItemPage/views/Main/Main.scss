@@ -76,10 +76,12 @@
   }
 
   &__short-lists {
-    //outline: 1px solid blue;
+    //outline: 1px solid blue;\
     height: 200px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     & > * { // div block TODO - Временное решение
       //outline: 1px solid orange;
@@ -93,7 +95,7 @@
         margin-bottom: 20px;
 
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 500;
         line-height: 20px;
       }
 
@@ -105,7 +107,7 @@
           margin-bottom: 10px;
 
           font-size: 16px;
-          font-weight: 200;
+          font-weight: 400;
           line-height: 16px;
         }
       }
