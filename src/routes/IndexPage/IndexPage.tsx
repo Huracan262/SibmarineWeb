@@ -23,7 +23,7 @@ export default function IndexPage() {
             <Banner />
 
             <div className={bem.element('container')}>
-                <Service />
+                {/*<Service />*/}
                 <Catalog />
                 <News theme={Theme.light} />
                 <Advantages theme={Theme.light} />

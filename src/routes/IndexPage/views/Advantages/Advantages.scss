@@ -126,11 +126,14 @@
     filter: blur(1px) grayscale(100%);
     opacity: 0.3;
 
-    transition: filter 200ms ease-out;
+    transition:
+      filter 200ms ease-out,
+      opacity 200ms ease-out;;
   }
 
   &__item:hover img {
     filter: blur(0) grayscale(50%);
+    opacity: 0.6;
   }
 }
 
