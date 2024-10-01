@@ -1,4 +1,4 @@
-@use 'style/variables' as v;
+@use "style/variables" as v;
 
 .Banner {
   padding-top: 150px;
@@ -15,7 +15,6 @@
     height: 300px;
     position: absolute;
     bottom: 0;
-    //bottom: 81px; // TODO - Я Хз как это работает
     background-image: linear-gradient(to bottom, transparent 0%, v.$color-dark-navy 100%);
   }
 
@@ -36,7 +35,7 @@
   }
 
   &__background-video {
-    width: 100%;
+    width: 1920px;
     position: absolute;
     top: 0;
     left: 50%;

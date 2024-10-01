@@ -1,4 +1,4 @@
-@use 'style/variables' as v;
+@use "style/variables" as v;
 
 .Header {
   position: relative;
@@ -88,5 +88,11 @@
     border: none;
     background-color: transparent;
     //transform: translateX(100px);
+  }
+}
+
+@media (max-width: v.$width-desktop) {
+  .Header {
+
   }
 }

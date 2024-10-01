@@ -22,7 +22,12 @@ const NewsElement = ({element}: INewsElement) => {
                 <p className={bem.element('description')}>{element.description}</p>
 
                 <div className={bem.element('addition')}>
-                    <Link className={bem.element('link')}>Подробнее</Link>
+                    <Link
+                        className={bem.element('link')}
+                        toRoute={element.url}
+                    >
+                        Подробнее
+                    </Link>
 
                     <time
                         className={bem.element('date')}

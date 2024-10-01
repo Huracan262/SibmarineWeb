@@ -10,7 +10,7 @@ const SOCIALS_LIST = [
     },
     {
         name: 'Whatsapp',
-        url: '',
+        url: 'https://wa.me/79230192378',
         logo: <FaWhatsapp />,
     },
     {
