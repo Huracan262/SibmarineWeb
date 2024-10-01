@@ -51,7 +51,6 @@ const Catalog: React.FC<ICatalog> = ({...props}) => {
 
                 <Button
                     className={bem.element('button')}
-                    onClick={}
                 >
                     Смотреть все категории
                 </Button>
