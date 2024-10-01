@@ -1,0 +1,47 @@
+@use 'style/variables' as v;
+
+.Team {
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__item {
+    width: 400px;
+    height: 400px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+  }
+
+  &__item-title {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__img {
+    order: -1;
+
+    height: auto;
+
+    border-radius: 15px;
+    background-color: v.$color-border-lines;
+  }
+}
+
+.Team--white {
+  color: v.$color-text-dark;
+
+  background-color: v.$color-light-background;
+}

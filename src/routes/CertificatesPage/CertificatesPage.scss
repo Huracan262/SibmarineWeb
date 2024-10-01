@@ -1,0 +1,30 @@
+@use "style/variables" as v;
+@import "style/mixins";
+
+.CertificatesPage {
+  padding-bottom: 100px;
+
+  color: v.$color-text-dark;
+
+  background-color: white;
+
+  @include blockShadows();
+
+  &__breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    * {
+      color: v.$color-text-dark !important;
+    }
+  }
+
+  &__title {
+    margin-top: -50px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 50px;
+  }
+}

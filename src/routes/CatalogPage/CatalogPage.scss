@@ -1,0 +1,77 @@
+@use "style/variables" as v;
+@import "style/mixins";
+
+.CatalogPage {
+  padding: 25px 0 50px;
+
+  background-color: white;
+
+  color: v.$color-text-dark;
+
+  @include blockShadows();
+
+  &__breadcrumbs * {
+    color: v.$color-text-dark !important;
+  }
+
+  &__title {
+    margin: 15px 0 25px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__filters {
+    width: 400px;
+  }
+
+  &__products-container {
+    flex-grow: 1;
+  }
+
+  &__sort {
+    margin: 8px 0 20px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    border-radius: 10px;
+    border: 1px solid v.$color-border-lines;
+  }
+
+  &__button {
+    margin-right: 10px;
+    display: flex;
+    gap: 10px;
+
+    border: 8px solid transparent;
+    background-color: transparent;
+  }
+
+  &__button-top {
+    border-top-color: black;
+  }
+
+  &__button-bottom {
+    border-bottom-color: black;
+  }
+
+  &__products-list {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__pagination {
+    margin-bottom: 50px;
+  }
+}

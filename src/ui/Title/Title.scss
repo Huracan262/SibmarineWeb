@@ -1,0 +1,57 @@
+@use 'style/variables' as v;
+
+.Title {
+  width: v.$width-desktop;
+  display: inline-block;
+
+  border-radius: 0;
+
+  pointer-events: none;
+
+  &__title {
+    width: v.$width-desktop;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+
+
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: v.$color-text-light;
+
+    border-radius: 0;
+    border-bottom: 1px solid v.$color-border-lines;
+
+    transition: border-color 200ms ease-out;
+  }
+
+  &__title--white {
+    color: v.$color-text-dark;
+    border-bottom: 1px solid fade-out(v.$color-dark-navy, 0.6);
+  }
+
+  &__icon {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    transform: translateX(-40px) scale(0.5);
+    opacity: 0;
+
+    transition: opacity 200ms ease-out, transform 200ms ease-out, color 400ms ease-out;
+  }
+
+  &__icon--white {
+    color: v.$color-tiffany-blue;
+  }
+
+  &:hover &__icon {
+    color: v.$color-tiffany-blue;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  &--link {
+    pointer-events: auto;
+  }
+}

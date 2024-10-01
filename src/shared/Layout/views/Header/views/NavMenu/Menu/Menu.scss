@@ -1,0 +1,42 @@
+@use 'style/variables' as v;
+
+.Menu {
+  &__item {
+    padding: 5px;
+    border-bottom: 1px solid fade-out(v.$color-border-lines, 0.9);
+  }
+
+  &__link, &__link * {
+    display: inline;
+    border: none;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: v.$color-text-dark;
+
+    transition: color 200ms ease-out;
+
+    &:hover {
+      color: v.$color-border-lines;
+    }
+
+    &:active {
+
+    }
+  }
+
+  .current {
+    background-color: v.$color-sky-blue;
+
+    transition:
+      color 200ms ease-out,
+      background-color 200ms ease-out;
+
+    & * {
+      color: v.$color-dark-navy;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use 'style/variables' as v;
+
+.Similar {
+  &__title {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid v.$color-border-lines;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  &__item-list {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item-item {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 16px;
+    list-style: disc inside;
+  }
+
+  &__item-price {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}

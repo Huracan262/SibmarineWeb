@@ -1,0 +1,71 @@
+@use 'style/variables' as v;
+@import 'style/mixins';
+
+.Warranty {
+  position: relative;
+
+  padding-bottom: 100px;
+  overflow: hidden;
+
+  &__list {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__iconContainer {
+    width: 40px;
+    height: 40px;
+    margin: 60px 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: v.$color-text-light;
+
+    background-color: fade-out(v.$color-dark-navy, 0.3);
+
+    transform: rotate(45deg);
+  }
+
+  &__icon {
+    font-size: 30px;
+  }
+
+  &__title {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+    font-size: inherit;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+
+    text-align: center;
+    font-weight: 300;
+
+    border-top: 1px solid fade-out(v.$color-tiffany-blue, 0.5);
+  }
+}
+
+.Warranty--white {
+  color: v.$color-text-dark;
+
+  background-color: v.$color-light-background;
+  @include blockShadows();
+}

@@ -1,0 +1,31 @@
+@use "style/variables" as v;
+
+.NavMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+
+  min-width: 600px;
+  min-height: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  color: v.$color-text-dark;
+
+  border-radius: 10px;
+  background-color: fade-out(v.$color-light-background, 0.1);
+  backdrop-filter: blur(20px);
+
+  &__list {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+      border-left: 1px solid v.$color-sky-blue;
+      border-right: 1px solid v.$color-sky-blue;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use 'style/variables' as v;
+
+.Contacts {
+  display: flex;
+  gap: 20px;
+
+  font-style: normal;
+
+  &__item {
+    font-size: 14px;
+    font-weight: inherit;
+    font-style: inherit;
+    color: fade-out(v.$color-text-light, 0.3);
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    transition: color 200ms ease-out;
+
+    &:hover {
+      color: v.$color-border-lines;
+      text-decoration: underline;
+    }
+  }
+
+  .light {
+    //color: v.$color-text-dark;
+  }
+}

@@ -1,0 +1,33 @@
+@use 'style/variables' as v;
+
+.Filter {
+  &__block {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border: 1px solid v.$color-border-lines;
+    //background-color: v.$color-border-lines;
+  }
+
+  &__title {
+    padding: 0 5px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    margin-bottom: 3px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+
+  &__input {
+    margin-right: 5px;
+  }
+
+}

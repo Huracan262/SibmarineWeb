@@ -1,0 +1,92 @@
+@use "style/variables" as v;
+@import "style/mixins";
+
+.PortfolioPage {
+  padding: 25px 0 100px;
+
+  color: v.$color-text-dark;
+
+  background-color: white;
+
+  @include blockShadows();
+
+
+  &__breadcrumbs {
+    padding-bottom: 25px;
+
+    * {
+      color: v.$color-text-dark !important;
+    }
+  }
+
+  &__main-title {
+    margin-top: -50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    background-color: v.$color-sky-blue;
+
+    overflow: hidden;
+
+    transition:
+      background-color 50ms ease-out,
+      transform 50ms ease-out;
+
+    &:hover {
+      background-color: v.$color-tiffany-blue;
+      transform: scale(1.01);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__link {
+    width: 100%;
+
+    & > * {
+      width: inherit;
+    }
+
+    & > * > * {
+      width: inherit;
+      padding: 20px;
+      display: flex;
+
+      color: v.$color-text-dark !important;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+  }
+
+  &__date {
+    margin-top: auto;
+    align-self: flex-end;
+  }
+
+  &__img {
+    width: 50%;
+    margin-right: 20px;
+    order: -1;
+
+    border-radius: 10px;
+  }
+}

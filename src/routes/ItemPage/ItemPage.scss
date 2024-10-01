@@ -1,0 +1,20 @@
+ @use 'style/variables' as v;
+ @import "style/mixins";
+
+.ItemPage {
+  padding: 50px 0 100px;
+
+  color: v.$color-text-dark;
+
+  background-color: white;
+
+  @include blockShadows();
+
+  &__breadcrumbs {
+    margin-bottom: 25px;
+
+    & * {
+      color: v.$color-text-dark !important;
+    }
+  }
+}

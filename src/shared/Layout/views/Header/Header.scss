@@ -1,0 +1,98 @@
+@use "style/variables" as v;
+
+.Header {
+  position: relative;
+  z-index: 1;
+  background-color: fade-out(v.$color-dark-navy, 0.8);
+  backdrop-filter: blur(5px);
+  //border-bottom: 1px solid fade-out(v.$color-border-lines, 0.9);
+  box-shadow: 0 0 20px 10px fade-out(v.$color-dark-navy, 0.8);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("/public/images/gratis-png-ilustracion-de-blanco-y-verde-azulado-onda-de-viento-euclidiana-azul-onda-azul.png");
+    background-size: 25%;
+    filter: invert(1);
+    opacity: 0.03;
+  }
+
+  &__wrapper {
+    padding: 5px 0;
+    display: flex;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    //&::before { // Подсветка лого
+    //  content: "";
+    //  position: absolute;
+    //  z-index: -1;
+    //
+    //  width: 1px;
+    //  height: 1px;
+    //
+    //  border-radius: 50%;
+    //  box-shadow: 0 -3px 50px 30px fade-out(v.$color-sky-blue, 0.3);
+    //
+    //  //animation: blinkLogo 6000ms infinite;
+    //}
+  }
+
+  &__container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    flex-grow: 1;
+
+  }
+
+  &__row-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    &::before { // Полоска
+      content: "";
+      width: 50%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      background-color: fade-out(v.$color-tiffany-blue, 0.7);
+    }
+  }
+
+  &__button {
+    margin-left: 20px;
+  }
+
+  &__row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__search {
+    //display: block;
+    margin-left: auto;
+    width: 200px;
+
+    border: none;
+    background-color: transparent;
+    //transform: translateX(100px);
+  }
+}
+
+@media (max-width: v.$width-desktop) {
+  .Header {
+
+  }
+}

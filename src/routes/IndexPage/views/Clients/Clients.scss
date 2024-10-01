@@ -1,0 +1,33 @@
+@use 'style/variables' as v;
+
+.Clients {
+  padding-bottom: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__description {
+    width: 600px;
+  }
+
+  &__list {
+    height: 100px;
+    width: 800px;
+  }
+
+  &__item {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    opacity: 0.2;
+    transition: opacity 1000ms ease-out;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 50ms ease-out;
+    }
+  }
+}

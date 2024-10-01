@@ -1,10 +1,12 @@
 @use "sass:meta";
 
+@use 'globals';
+@use 'mixins';
+@use 'variables';
+
 @use '~@steroidsjs/bootstrap/scss/normalize';
 @use '~@steroidsjs/bootstrap/scss/fonts';
 @use '~@steroidsjs/bootstrap/scss/animations';
-
-@use 'variables';
 
 @use '~@steroidsjs/bootstrap/content/Accordion/AccordionView';
 @use '~@steroidsjs/bootstrap/content/Accordion/AccordionItemView';

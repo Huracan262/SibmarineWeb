@@ -1,0 +1,135 @@
+@use 'style/variables' as v;
+@import 'style/animations';
+
+.Geography {
+  position: relative;
+
+  padding-bottom: 50px;
+
+  overflow-x: clip;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__description {
+    width: 500px;
+    position: absolute;
+  }
+
+  &__map {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    opacity: 0.1;
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__item {
+    min-width: 20px;
+    height: 20px;
+    padding: 15px 10px 15px 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+  }
+
+  &__point {
+    width: 10px;
+    height: 10px;
+    position: relative;
+
+    border-radius: 50%;
+    background-image: linear-gradient(to right, v.$color-light-blue 90%, v.$color-tiffany-blue);
+    box-shadow: 0 0 10px fade-out(black, 0.2);
+
+    transition: opacity 200ms ease-out;
+    opacity: 0.6;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      left: 50%;
+      margin-left: -15px;
+
+      border-radius: 50%;
+      border-top: 1px solid v.$color-text-light;
+      background-color: white;
+
+      opacity: 0.15;
+      z-index: -1;
+      pointer-events: none;
+
+      animation: blinkPoint 4000ms ease infinite;
+    }
+  }
+
+  &__point-description {
+    display: none;
+    width: 250px;
+    min-height: 100px;
+    padding: 10px;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    white-space: break-spaces;
+    color: v.$color-text-light;
+
+    background-color: fade-out(black, 0.6);
+
+    opacity: 0;
+    z-index: 1;
+
+    transition: opacity 500ms ease-out;
+
+    &::before {
+      content: "";
+      width: 250px;
+      height: 20px;
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+
+      z-index: -1;
+    }
+  }
+
+  &__city {
+    width: max-content;
+    margin-left: 15px;
+    opacity: 0.6;
+  }
+
+  &__item:hover &__point,
+  &__item:hover &__city { // TODO - Необходим рефакторинг
+    opacity: 1;
+  }
+
+  &__item:hover &__point-description {
+    display: block;
+    opacity: 1;
+    transition: opacity 100ms ease;
+  }
+}

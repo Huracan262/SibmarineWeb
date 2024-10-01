@@ -1,0 +1,38 @@
+@use 'style/variables' as v;
+@import 'style/mixins';
+
+.BannerAbout {
+  position: relative;
+
+  padding-bottom: 50px;
+
+  background-color: v.$color-light-background;
+
+  @include blockShadows(bot);
+
+  &__title {
+    position: relative;
+
+    padding: 100px 50px 200px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: center;
+    color: fade-out(v.$color-text-dark, 0.7);
+
+    border-radius: 10px;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(45%);
+    opacity: 0.5;
+  }
+}

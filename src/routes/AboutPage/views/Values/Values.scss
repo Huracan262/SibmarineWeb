@@ -1,0 +1,38 @@
+@use 'style/variables' as v;
+
+.Values {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+  }
+
+  &__item-title {
+    font-size: 14px;
+    font-weight: 400;
+    align-self: flex-end;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    //filter: grayscale(0.5);
+    opacity: 0.7;
+  }
+}

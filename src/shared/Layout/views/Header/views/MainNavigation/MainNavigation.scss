@@ -1,0 +1,53 @@
+@use 'style/variables' as v;
+
+.MainNavigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  &__list {
+    display: flex;
+    //gap: 10px;
+  }
+
+  &__list-item {
+  }
+
+  &__link {
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    color: v.$color-text-light;
+
+    border-radius: 10px 10px 0 0;
+    border: 3px solid transparent;
+  }
+
+  .current {
+    color: v.$color-tiffany-blue !important;
+    border-bottom: 3px solid v.$color-sky-blue;
+
+    .icon, .text {
+      background-color: red;
+      color: v.$color-text-light;
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+
+    color: v.$color-text-light;
+  }
+
+  &__text {
+    color: v.$color-text-light;
+  }
+
+  .light {
+    color: v.$color-text-light;
+  }
+}

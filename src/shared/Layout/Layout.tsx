@@ -1,21 +1,35 @@
 import * as React from 'react';
 
-import {useBem} from '@steroidsjs/core/hooks';
-import useLayout, {STATUS_OK, STATUS_LOADING} from '@steroidsjs/core/hooks/useLayout';
+import {useBem, useSelector} from '@steroidsjs/core/hooks';
+import useLayout, {STATUS_LOADING, STATUS_NOT_FOUND, STATUS_OK} from '@steroidsjs/core/hooks/useLayout';
 
 import {Notifications} from '@steroidsjs/core/ui/layout';
-import Header from '@steroidsjs/core/ui/layout/Header';
 import Portal from '@steroidsjs/core/ui/layout/Portal';
 import ModalPortal from '@steroidsjs/core/ui/modal/ModalPortal';
-import {ROUTE_ROOT} from '../../routes';
+import {getRouteBreadcrumbs, getRouteId} from '@steroidsjs/core/reducers/router';
+
+import RouteId from 'enums/RouteId';
+import Theme from 'enums/Theme';
+import NotFoundPage from 'routes/NotFoundPage';
 
 import './Layout.scss';
+import Header from './views/Header';
+import Footer from './views/Footer';
 
+// TODO - Отрефакторить код (перенести ХК)
 export default function Layout(props: React.PropsWithChildren<any>) {
     const bem = useBem('Layout');
+    const routeId = useSelector(getRouteId);
+    const breadcrumbs = useSelector(state => getRouteBreadcrumbs(state, routeId));
 
     //const components = useComponents();
     const {status} = useLayout(/*() => components.http.post('/api/v1/init')*/);
+
+    if (status === STATUS_NOT_FOUND) {
+        return (
+            <NotFoundPage />
+        );
+    }
 
     if (status !== STATUS_OK) {
         return status !== STATUS_LOADING ? status : null;
@@ -23,16 +37,11 @@ export default function Layout(props: React.PropsWithChildren<any>) {
 
     return (
         <div className={bem.block()}>
-            <Header
-                logo={{
-                    title: 'Boilerplate12345',
-                }}
-                nav={{
-                    items: ROUTE_ROOT,
-                }}
-            />
+            <Header theme={routeId === RouteId.HOME ? Theme.light : Theme.dark} />
+
             <div className={bem.element('content')}>
                 <Notifications />
+                {/*{routeId !== RouteId.HOME && <Breadcrumbs items={breadcrumbs} />}*/}
                 {props.children}
                 <ModalPortal />
                 {
@@ -41,6 +50,8 @@ export default function Layout(props: React.PropsWithChildren<any>) {
                         : <Portal />
                 }
             </div>
+
+            <Footer />
         </div>
     );
 }

@@ -1,0 +1,42 @@
+@use 'style/variables' as v;
+
+.Map-Modal {
+  background-color: fade-out(v.$color-dark-navy, 0.8);
+  box-shadow: 0 0 20px fade-out(white, 0.90);
+
+  border: 1px solid fade-out(white, 0.93);
+  backdrop-filter: blur(10px);
+
+  .ModalView__header {
+    padding: 20px 20px 0;
+  }
+
+  span { // Заголовок
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 200;
+    color: v.$color-text-light;
+  }
+
+  svg { // Кнопка закрытия
+    transition: transform 200ms ease-out;
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    path {
+    transition: stroke 200ms ease-out, transform 200ms ease-out;
+      stroke: v.$color-text-light;
+    }
+
+    &:hover path {
+      stroke: v.$color-tiffany-blue;
+    }
+
+    &:active path {
+      stroke: fade-out(v.$color-tiffany-blue, 0.2);
+    }
+  }
+}

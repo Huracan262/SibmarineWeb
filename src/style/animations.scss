@@ -1,0 +1,25 @@
+@use "./variables" as v;
+
+@keyframes blinkPoint {
+  from {
+    transform: scale(0.4);
+
+  } 60% {
+      opacity: 0.15;
+    }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkLogo {
+  0% {
+    box-shadow: 0 0 50px 50px fade-out(v.$color-tiffany-blue, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px 50px fade-out(v.$color-tiffany-blue, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 50px 50px fade-out(v.$color-tiffany-blue, 0.5);
+  }
+}

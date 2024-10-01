@@ -1,0 +1,8 @@
+@use 'style/variables' as v;
+@import 'style/animations';
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

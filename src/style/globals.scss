@@ -1,0 +1,74 @@
+@use 'variables' as v;
+@import 'fonts.scss';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: v.$color-text-light;
+
+  background-color: v.$color-dark-navy;
+
+  section[class$="--white"] {
+    color: v.$color-text-dark;
+
+    background-color: v.$color-light-background;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px; // Ширина полосы прокрутки
+  height: 10px; // Высота для горизонтальной полосы, если потребуется
+  opacity: 0; // Полностью прозрачный по умолчанию
+  transition: opacity 0.3s; // Плавное изменение прозрачности
+}
+
+/* Стили трека (дорожки) */
+::-webkit-scrollbar-track {
+  background: v.$color-dark-navy; // Используем темно-синий фон
+}
+
+/* Стили самого ползунка */
+::-webkit-scrollbar-thumb {
+  background: v.$color-border-lines; // Голубой цвет ползунка
+  border-radius: 5px; // Скругленные края для ползунка
+}
+
+/* Изменение стиля ползунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: v.$color-light-blue; // Светло-синий цвет при наведении
+}
+
+/* Показываем полосу прокрутки при наведении */
+body:hover::-webkit-scrollbar {
+  opacity: 1; // Полностью видимый только при наведении
+}
